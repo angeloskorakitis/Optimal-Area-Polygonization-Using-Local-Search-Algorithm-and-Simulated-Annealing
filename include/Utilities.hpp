@@ -21,6 +21,11 @@
 #include <sstream>
 
 
+// Καινούρια.
+#include <CGAL/Simple_cartesian.h>
+#include <CGAL/Search_traits_2.h>
+#include <CGAL/Orthogonal_k_neighbor_search.h>
+
 // Some typedefs for readability
 
 typedef CGAL::Epick                                           K;
@@ -37,6 +42,12 @@ typedef std::vector<Segment>                                  SegmentVector;
 typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
 typedef std::string                                           String;
+
+
+// Καινούρια.
+typedef CGAL::Search_traits_2<K> SearchTraits;
+typedef CGAL::Orthogonal_k_neighbor_search<SearchTraits> Neighbor_search;
+typedef Neighbor_search::Tree Tree;
 
 //______________________________Input/Output functions___________________________________
 

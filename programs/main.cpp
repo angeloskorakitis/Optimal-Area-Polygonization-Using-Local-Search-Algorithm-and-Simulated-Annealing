@@ -1,5 +1,5 @@
-#include "Polygonization_Using_Incremental_Algorithm.hpp"
-#include "Polygonization_Using_Convex_Hull_Algorithm.hpp"
+#include "../include/Polygonization_Using_Incremental_Algorithm.hpp"
+#include "../include/Polygonization_Using_Convex_Hull_Algorithm.hpp"
 #include <iostream>
 #include <ctime>
 
@@ -7,6 +7,51 @@
 
 int main(int argc, char *argv[])
 {
+
+
+
+
+
+
+
+
+
+
+
+Tree tree;
+
+tree.insert(Point(0,0));
+tree.insert(Point(10,10));
+tree.insert(Point(0,10));
+tree.insert(Point(10,0));
+tree.insert(Point(3,3));
+tree.insert(Point(5,6));
+tree.insert(Point(8,9));
+tree.insert(Point(9,2));
+
+// tree.print();
+
+  // Initialize the search structure, and search all N points
+  Point query(5,5);
+  Neighbor_search search(tree, query, 4);
+   // report the N nearest neighbors and their distance
+  // This should sort all N points by increasing distance from origin
+  for(Neighbor_search::iterator it = search.begin(); it != search.end(); ++it)
+    std::cout << it->first << " "<< std::sqrt(it->second) << std::endl;
+
+
+
+
+exit(EXIT_SUCCESS);
+
+
+
+
+
+
+
+
+
 
   // Input parameters.
   String error_msg = "Unable to run the program.\nUsage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> \n";
