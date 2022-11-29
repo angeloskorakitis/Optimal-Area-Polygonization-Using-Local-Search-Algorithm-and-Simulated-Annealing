@@ -80,3 +80,14 @@ void add_point_to_polygon(Point point, Segment edge, Polygon* polygon);
 // two new edges previous_edge.source() to point and previous_edge.target() to point are added.
 
 void add_point_to_polygon(Polygon* polygon, Tuple tuple);
+
+
+
+
+
+
+
+// New stuff
+int position_of_point_in_polygon(Polygon polygon, Point point);
+
+int position_of_segment_in_polygon(Polygon polygon, Segment segment);

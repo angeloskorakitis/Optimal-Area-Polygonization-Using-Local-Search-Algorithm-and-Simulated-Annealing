@@ -444,3 +444,33 @@ Polygon convex_hull_algorithm(PointVector input_points, int edge_selection) {
 ///////   Θα βάλουμε καινούρια αρχεία .cpp κλπ. 
 
 
+int position_of_point_in_polygon(Polygon polygon, Point point) {
+  int position = 0;
+  bool found = false;
+  for(VertexIterator i = polygon.begin(); i != polygon.end(); i++) {
+    if(point == *i) {
+      found = true;
+      break;
+    }
+    position++;
+  }
+
+  if(found) return position;
+  else return -1;
+}
+
+
+int position_of_segment_in_polygon(Polygon polygon, Segment segment) {
+  int position = 0;
+  bool found = false;
+  for(EdgeIterator i = polygon.edges_begin(); i != polygon.edges_end(); i++) {
+    if((segment == *i) || (segment.opposite() == *i)) {
+      found = true;
+      break;
+    }
+    position++;
+  }
+
+  if(found) return position;
+  else return -1;
+}

@@ -26,6 +26,9 @@
 #include <CGAL/Search_traits_2.h>
 #include <CGAL/Orthogonal_k_neighbor_search.h>
 
+#include <CGAL/Fuzzy_iso_box.h>
+
+
 // Some typedefs for readability
 
 typedef CGAL::Epick                                           K;
@@ -48,6 +51,7 @@ typedef std::string                                           String;
 typedef CGAL::Search_traits_2<K> SearchTraits;
 typedef CGAL::Orthogonal_k_neighbor_search<SearchTraits> Neighbor_search;
 typedef Neighbor_search::Tree Tree;
+typedef CGAL::Fuzzy_iso_box<SearchTraits> Box;
 
 //______________________________Input/Output functions___________________________________
 

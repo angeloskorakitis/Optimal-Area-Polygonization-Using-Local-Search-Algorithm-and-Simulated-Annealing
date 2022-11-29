@@ -45,18 +45,8 @@ CGAL/Search_traits_2.h
 -
 CGAL/Orthogonal_k_neighbor_search.h
 -
-
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp
-../include/Polygonization_Using_Convex_Hull_Algorithm.hpp
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/include/Polygonization_Using_Convex_Hull_Algorithm.hpp
-
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp
-Polygonization_Using_Incremental_Algorithm.hpp
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.hpp
-
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/modules/Utilities.cpp
-Utilities.hpp
-/home/sdi1900191/Project2/2023-emiris-k23-assignment-2/modules/Utilities.hpp
+CGAL/Fuzzy_iso_box.h
+-
 
 /home/sdi1900191/Project2/2023-emiris-k23-assignment-2/programs/main.cpp
 ../include/Polygonization_Using_Incremental_Algorithm.hpp
