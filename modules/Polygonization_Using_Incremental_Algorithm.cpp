@@ -278,6 +278,10 @@ Polygon incremental_algorithm(PointVector input_points, int edge_selection, Stri
     // Insert a point into the polygon according to the edge selection strategy (random, min/ max area)
     add_point_to_polygon(*p_input_points, visible_edges, edge_selection, &polygon);
     
+    // We need CCW orientation for the polygon points
+    if(polygon.is_clockwise_oriented())
+    polygon.reverse_orientation();
+
     // Continue with the next point...
     advance(p_input_points, 1);
   }

@@ -125,12 +125,27 @@ CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Pro
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp -o CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
 
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o: CMakeFiles/to_polygon.dir/flags.make
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o -MF CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o.d -o CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o -c /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp
+
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp > CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp -o CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+
 # Object files for target to_polygon
 to_polygon_OBJECTS = \
 "CMakeFiles/to_polygon.dir/main.cpp.o" \
 "CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o" \
 "CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o" \
-"CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o"
+"CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o" \
+"CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o"
 
 # External object files for target to_polygon
 to_polygon_EXTERNAL_OBJECTS =
@@ -139,12 +154,13 @@ to_polygon: CMakeFiles/to_polygon.dir/main.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
+to_polygon: CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/build.make
 to_polygon: /opt/homebrew/lib/libgmpxx.dylib
 to_polygon: /opt/homebrew/lib/libmpfr.dylib
 to_polygon: /opt/homebrew/lib/libgmp.dylib
 to_polygon: CMakeFiles/to_polygon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable to_polygon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable to_polygon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/to_polygon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

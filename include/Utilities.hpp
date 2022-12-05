@@ -20,7 +20,6 @@
 #include <fstream>
 #include <sstream>
 
-
 // Some typedefs for readability
 
 typedef CGAL::Epick                                           K;
@@ -30,10 +29,13 @@ typedef CGAL::Object                                          Object;
 typedef CGAL::Polygon_2<K>                                    Polygon;
 typedef CGAL::Triangle_2<K>                                   Triangle;
 typedef Polygon::Vertex_iterator                              VertexIterator;
+typedef Polygon::Vertex_circulator                        VertexCirculator;
 typedef Polygon::Edge_const_circulator                        EdgeCirculator;
 typedef Polygon::Edge_const_iterator                          EdgeIterator;
 typedef std::vector<Point>                                    PointVector;
 typedef std::vector<Segment>                                  SegmentVector;
+typedef std::vector<VertexCirculator>                         VertexCirculatorVector;
+typedef VertexCirculatorVector::iterator                      pVertexCirculatorVector;
 typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
 typedef std::string                                           String;
@@ -47,7 +49,7 @@ PointVector parse_file(String filename);
 
 // Output file function. Writes the results into the output file. 
 
-void print_output(Polygon polygon, PointVector points, String filename, String algorithm, int edge_selection, String initialization, std::chrono::duration<double> duration);
+void print_output(Polygon polygon,Polygon new_polygon, PointVector points, String filename, String algorithm, int edge_selection, String initialization, std::chrono::duration<double> duration);
 
 
 //________________________________Printing functions______________________________________

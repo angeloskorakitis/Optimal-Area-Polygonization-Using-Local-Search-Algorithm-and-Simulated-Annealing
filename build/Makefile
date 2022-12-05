@@ -129,6 +129,30 @@ to_polygon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/build
 .PHONY : to_polygon/fast
 
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o
+
+# target to build an object file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i
+
+# target to preprocess a source file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s
+
+# target to generate assembly for a file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... to_polygon"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.i"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.s"

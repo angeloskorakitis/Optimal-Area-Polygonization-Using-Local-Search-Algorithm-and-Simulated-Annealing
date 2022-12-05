@@ -1,6 +1,6 @@
-CMakeFiles/to_polygon.dir/main.cpp.o: \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/main.cpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Polygonization_Using_Incremental_Algorithm.hpp \
+CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o: \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Local_Search_Area-Optimal_Polygonization.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Utilities.hpp \
   /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /opt/homebrew/include/CGAL/Simple_cartesian.h \
@@ -2124,6 +2124,4 @@ CMakeFiles/to_polygon.dir/main.cpp.o: \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Local_Search_Area-Optimal_Polygonization.hpp
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h

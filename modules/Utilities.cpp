@@ -69,15 +69,15 @@ return points;
 }
 
 
-void print_output(Polygon polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, std::chrono::duration<double> duration) {
+void print_output(Polygon polygon,Polygon new_polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, std::chrono::duration<double> duration) {
   std::ofstream outfile(filename);
   try{
     if(outfile.is_open()) {
       outfile << "Polygonization" << std::endl;
 
-      for(Point point : points) {
-        outfile << point << std::endl;
-      }
+      // for(Point point : points) {
+      //   outfile << point << std::endl;
+      // }
 
       for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
         outfile << *edge << std::endl;
@@ -92,6 +92,7 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
       }
 
       long int polygon_area = CGAL::abs(polygon.area());
+      long int new_polygon_area = CGAL::abs(new_polygon.area());
       
       Polygon convex_hull;
       CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
@@ -99,9 +100,12 @@ void print_output(Polygon polygon, PointVector points, std::string filename, std
       long double convex_hull_area = CGAL::abs(convex_hull.area());
 
       long double ratio =(long double)polygon_area / convex_hull_area;
+      long double new_ratio =(long double)new_polygon_area / convex_hull_area;
 
-      outfile << "area: " << polygon_area << std::endl;
+      outfile << "Polygon area: " << polygon_area << std::endl;
       outfile << "ratio: " <<  ratio << std::endl;
+      outfile << "New Polygon area: " << new_polygon_area << std::endl;
+      outfile << "New ratio: " <<  new_ratio << std::endl;
       outfile << "construction time: " << duration.count();
 
       outfile.close();

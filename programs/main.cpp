@@ -1,5 +1,6 @@
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
 #include "Polygonization_Using_Convex_Hull_Algorithm.hpp"
+#include "Local_Search_Area-Optimal_Polygonization.hpp"
 #include <iostream>
 #include <ctime>
 
@@ -87,11 +88,17 @@ int main(int argc, char *argv[])
   // Running time
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
+  Polygon new_polygon = local_search(polygon);
+
   // Print output
-  print_output(polygon, points, output_file, algorithm, edge_selection, initialization, duration);
+  print_output(polygon,new_polygon, points, output_file, algorithm, edge_selection, initialization, duration);
+
 
   // If the polygon is not simple then failure
   if(!polygon.is_simple()) return EXIT_FAILURE;
+
+  // If the polygon is not simple then failure
+  if(!new_polygon.is_simple()) return EXIT_FAILURE;
   
   return EXIT_SUCCESS;
 }
