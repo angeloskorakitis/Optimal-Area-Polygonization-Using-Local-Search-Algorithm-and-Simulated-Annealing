@@ -69,47 +69,47 @@ return points;
 }
 
 
-void print_output(Polygon polygon,Polygon new_polygon, PointVector points, std::string filename, std::string algorithm, int edge_selection, std::string initialization, std::chrono::duration<double> duration) {
+void print_output(Polygon polygon_initial, 
+                  Polygon polygon, 
+                  PointVector points, 
+                  std::string filename,
+                  std::string algorithm_initial,
+                  std::string algorithm,
+                  std::string optimization, 
+                  std::chrono::duration<double> duration) 
+{
   std::ofstream outfile(filename);
   try{
     if(outfile.is_open()) {
-      outfile << "Polygonization" << std::endl;
+      outfile << "Optimal Area Polygonization" << std::endl;
 
-      // for(Point point : points) {
-      //   outfile << point << std::endl;
-      // }
+      for(Point point : points) {
+        outfile << point << std::endl;
+      }
 
       for(EdgeIterator edge = polygon.edges_begin(); edge != polygon.edges_end(); edge++) {
         outfile << *edge << std::endl;
       }
 
+      outfile << "Algorithm: " << algorithm_initial << "_" << algorithm << "_" << optimization << std::endl;
 
-      if(algorithm == "incremental") {
-        outfile << "Algorithm: " << algorithm << "_edge_selection" << edge_selection << "_initialization" << initialization << std::endl;
-      }
-      else {
-        outfile << "Algorithm: " << algorithm << "_edge_selection" << edge_selection << std::endl;
-      }
-
-      long int polygon_area = CGAL::abs(polygon.area());
-      long int new_polygon_area = CGAL::abs(new_polygon.area());
+      long int area_initial = CGAL::abs(polygon_initial.area());
+      long int area = CGAL::abs(polygon.area());
       
       Polygon convex_hull;
-      CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
-
+      CGAL::convex_hull_2(polygon_initial.begin(), polygon_initial.end(), std::back_inserter(convex_hull));
       long int convex_hull_area = CGAL::abs(convex_hull.area());
 
-      long double ratio =(long double)polygon_area / convex_hull_area;
-      long double new_ratio =(long double)new_polygon_area / convex_hull_area;
+      long double ratio_initial =(long double)area_initial / convex_hull_area;
+      long double ratio =(long double)area / convex_hull_area;
 
-      outfile << "Polygon area: " << polygon_area << std::endl;
+      outfile << "area_initial: " << area_initial << std::endl;
+      outfile << "area: " << area << std::endl;
+      outfile << "ratio_initial: " <<  ratio_initial << std::endl;
       outfile << "ratio: " <<  ratio << std::endl;
-      outfile << "New Polygon area: " << new_polygon_area << std::endl;
-      outfile << "New ratio: " <<  new_ratio << std::endl;
       outfile << "construction time: " << duration.count();
 
       outfile.close();
-
     }
     else throw "Output file could not open.\n";
   }

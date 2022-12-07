@@ -10,36 +10,51 @@ int main(int argc, char *argv[])
 {
 
   // Input parameters.
-  String error_msg = "Unable to run the program.\nUsage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> \n";
-  std::string input_file = "-1";
-  std::string output_file = "-1";
-  std::string algorithm = "-1";
-  std::string initialization = "-1";
-  int edge_selection = 0;
+  String error_msg = "Unable to run the program.\nUsage: ./optimal_polygon –i <point set input file> –o <output file> -algorithm_initial <incremental or convex_hull> –algorithm <local_search or simulated_annealing> -L [L parameter according to algorithm] –max [maximal area polygonization] –min [minimal area polygonization] –threshold <double> [in local search] –annealing <\"local\" or \"global\" or \"subdivision\" in simulated annealing> \n";
+  String input_file = "-1";
+  String output_file = "-1";
+  String algorithm = "-1";
+  String algorithm_initial = "-1";
+  int L = -1;
+  double threshold = -1.0;
+  String optimization = "-1";
+  String annealing = "-1";
 
-  // Arguments count check.
-  if((argc != 9) && (argc != 11)) 
+  // // Arguments count check.
+  if((argc != 14) && (argc != 16)) 
   {
     std::cout << error_msg;
     return EXIT_FAILURE;
   }
 
   // Argument pass.
-  for(int i = 1; i < argc; i+=2) {
+  for(int i = 1; i < argc; i++) {
     if(strcmp(argv[i], "-i") == 0) {
       input_file = argv[i+1];
     }
     else if(strcmp(argv[i], "-o") == 0) {
       output_file = argv[i+1];
     }
+    else if(strcmp(argv[i], "-algorithm_initial") == 0) {
+      algorithm_initial = argv[i+1];
+    }
     else if(strcmp(argv[i], "-algorithm") == 0) {
       algorithm = argv[i+1];
     }
-    else if(strcmp(argv[i], "-edge_selection") == 0) {
-      edge_selection = atoi(argv[i+1]);
+    else if(strcmp(argv[i], "-L") == 0) {
+      L = atoi(argv[i+1]);
     }
-    else if(strcmp(argv[i], "-initialization") == 0) {
-      initialization = argv[i+1];
+    else if(strcmp(argv[i], "-threshold") == 0) {
+      threshold = std::stod(argv[i+1]);
+    }
+    else if(strcmp(argv[i], "-max") == 0) {
+      optimization = "max";
+    }
+    else if(strcmp(argv[i], "-min") == 0) {
+      optimization = "min";
+    }
+    else if(strcmp(argv[i], "-annealing") == 0) {
+      annealing = argv[i+1];
     }
   }
 
@@ -48,10 +63,13 @@ int main(int argc, char *argv[])
   {
     if(input_file == "-1")  throw error_msg;
     if(output_file == "-1") throw error_msg;
+    if(algorithm_initial == "-1")   throw error_msg;
     if(algorithm == "-1")   throw error_msg;
-    // Incremental algorithm needs initialization according to documentation
-    if(initialization == "-1") if(algorithm == "incremental") throw error_msg;
-    if((edge_selection < 1) || (edge_selection > 3)) throw error_msg;
+    if(L == -1)   throw error_msg;
+    if(optimization == "-1")   throw error_msg;
+    if(threshold == -1.0) if(algorithm == "local_search")  throw error_msg;
+    // Simulated annealing algorithm needs initialization according to documentation
+    if(annealing == "-1") if(algorithm == "simulated_annealing") throw error_msg;
   }
   catch(String error_msg)
   {
@@ -67,38 +85,78 @@ int main(int argc, char *argv[])
 
   srand(time(NULL));
 
-  Polygon polygon;
-  
-  // Calling the algorihm function.
-  if(algorithm == "incremental") {
-    polygon = incremental_algorithm(points, edge_selection, initialization);
+
+  Polygon polygon_initial;
+
+
+  // Calling the algorihm_initial function.
+  if(algorithm_initial == "incremental") 
+  {
+    int edge_selection;
+    String initialization = "1a";
+
+    // If optimization is max the run incremental with min edge selection, else with max edge selection...
+    if(optimization=="max") 
+    {
+      edge_selection = 3;
+      polygon_initial = incremental_algorithm(points, edge_selection, initialization);
+    }
+    else{
+      edge_selection = 2;
+      polygon_initial = incremental_algorithm(points, edge_selection, initialization);
+    } 
   }
-  else if(algorithm == "convex_hull") {
-    polygon = convex_hull_algorithm(points, edge_selection);
+  else if(algorithm_initial == "convex_hull") {
+    //
+    // Pedio doksis lampron!
+    //
+  }
+  else {
+    std::cout << "Use a valid algorithm_initial name!" << std::endl;
+    std::cerr << error_msg;
+    return EXIT_FAILURE;
+  }
+
+  Polygon polygon;
+
+  // Calling the algorihm function.
+  if(algorithm == "local_search") {
+    polygon = local_search(polygon_initial, threshold, L);
+  }
+  else if(algorithm == "simulated_annealing") {
+    //
+    // Pedio doksis lampron!
+    //
   }
   else {
     std::cout << "Use a valid algorithm name!" << std::endl;
     std::cerr << error_msg;
     return EXIT_FAILURE;
   }
-  
+
+
   // Stoping timer
   auto stop = std::chrono::high_resolution_clock::now();
   
   // Running time
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
-  Polygon new_polygon = local_search(polygon);
-
   // Print output
-  print_output(polygon,new_polygon, points, output_file, algorithm, edge_selection, initialization, duration);
+  print_output(polygon_initial, 
+                  polygon, 
+                  points, 
+                  output_file,
+                  algorithm_initial,
+                  algorithm,
+                  optimization, 
+                  duration);
 
 
   // If the polygon is not simple then failure
   if(!polygon.is_simple()) return EXIT_FAILURE;
 
   // If the polygon is not simple then failure
-  if(!new_polygon.is_simple()) return EXIT_FAILURE;
+  if(!polygon.is_simple()) return EXIT_FAILURE;
   
   return EXIT_SUCCESS;
 }

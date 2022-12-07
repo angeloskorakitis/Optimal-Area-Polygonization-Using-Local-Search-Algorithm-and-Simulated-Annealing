@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named to_polygon
+# Target rules for targets named optimal_polygon
 
 # Build rule for target.
-to_polygon: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 to_polygon
-.PHONY : to_polygon
+optimal_polygon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 optimal_polygon
+.PHONY : optimal_polygon
 
 # fast build rule for target.
-to_polygon/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/build
-.PHONY : to_polygon/fast
+optimal_polygon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/build
+.PHONY : optimal_polygon/fast
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o
 
 # target to build an object file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
@@ -142,7 +142,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to preprocess a source file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
@@ -150,7 +150,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to generate assembly for a file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
@@ -158,7 +158,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to build an object file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
@@ -166,7 +166,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to preprocess a source file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.i
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
@@ -174,7 +174,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to generate assembly for a file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.s
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
@@ -182,7 +182,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to build an object file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
@@ -190,7 +190,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to preprocess a source file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.i
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
@@ -198,7 +198,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to generate assembly for a file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.s
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o
@@ -206,7 +206,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to build an object file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.i
@@ -214,7 +214,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to preprocess a source file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.i
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.i
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.s
@@ -222,7 +222,7 @@ Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assig
 
 # target to generate assembly for a file
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.s
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.s
 
 main.o: main.cpp.o
@@ -230,7 +230,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -238,7 +238,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -246,7 +246,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -257,7 +257,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... to_polygon"
+	@echo "... optimal_polygon"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s"

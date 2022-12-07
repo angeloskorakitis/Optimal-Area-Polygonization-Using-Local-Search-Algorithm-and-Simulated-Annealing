@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( to_polygon )
+project( optimal_polygon )
 
 
 # CGAL and its components
