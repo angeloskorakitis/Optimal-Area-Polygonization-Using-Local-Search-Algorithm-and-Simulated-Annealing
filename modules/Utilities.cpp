@@ -97,7 +97,7 @@ void print_output(Polygon polygon,Polygon new_polygon, PointVector points, std::
       Polygon convex_hull;
       CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
 
-      long double convex_hull_area = CGAL::abs(convex_hull.area());
+      long int convex_hull_area = CGAL::abs(convex_hull.area());
 
       long double ratio =(long double)polygon_area / convex_hull_area;
       long double new_ratio =(long double)new_polygon_area / convex_hull_area;
