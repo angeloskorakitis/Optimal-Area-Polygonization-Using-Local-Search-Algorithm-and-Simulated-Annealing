@@ -10,7 +10,7 @@
 #include "Utilities.hpp"
 
 
-enum { RANDOM = 1, MIN_AREA = 2, MAX_AREA = 3};
+enum { RANDOM = 1, MIN_AREA = 1, MAX_AREA = 1 };
 
 
 // Struct to improve time performance.

@@ -4,8 +4,24 @@
 #include <ctime>
 
 #pragma one;
+enum { MINIMALIZATION = 6, MAXIMALIZATION = 7 };
 
 
+// Returns true if Metropolis criterion holds, false otherwise.
+bool metropolis(double difference, double temperature) {
+
+  // Random number in [0,1].
+  double random_number = ( (double) rand() / (double) RAND_MAX);
+
+  double number = exp( -difference / temperature);
+  std::cout << "Metropolis! Numb = " << number << " R = " << random_number << std::endl;
+  if(number >= random_number) return true;
+  else return false;
+}
+
+
+// Computates the energy of the given polygon based on the convex hull area
+// and uses the correct formula depending on the state of "minimalization" flag (true/false).
 double compute_energy(Polygon polygon, double ch_area, bool minimalization) {
   if(minimalization) {
   double div = CGAL::abs(polygon.area()) / ch_area;
@@ -18,6 +34,8 @@ double compute_energy(Polygon polygon, double ch_area, bool minimalization) {
   }
 }
 
+// Checks if the new edges created from the local step intersect
+// with any edges of the polygon that they have a point int the box.
 bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Point p4, PointVector points) {
 
   int pos1 = position_of_point_in_polygon(*polygon, p1);
@@ -26,11 +44,79 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
   Segment to_check_1 = *((*polygon).edges_begin() + pos1);
   Segment to_check_2 = *((*polygon).edges_begin() + pos2);
 
-  std::cout << "Vivaldi Bassoon Concerto... to_check_1 = " << to_check_1 << " to_check_2 = " << to_check_2 << std::endl;
+  // std::cout << "Vivaldi Bassoon Concerto... to_check_1 = " << to_check_1 << " to_check_2 = " << to_check_2 << std::endl;
 
 
   for(Point point : points) {
-    if((point == p1) || (point == p2) || (point == p3) || (point == p4)) continue;
+    if((point == p2) || (point == p3)) continue;
+
+    if(point == p1) {
+
+      int point_index = position_of_point_in_polygon(*polygon, point);
+
+      int previous_edge = point_index - 1;
+      if(point_index == 0) {
+        previous_edge = (*polygon).size() - 1;
+      }
+
+      Segment prev = *((*polygon).edges_begin() + previous_edge);
+
+      std::cout << "Vivaldi Bassoon Concerto... prev = " << prev << std::endl;
+
+      Point intersection_point;
+
+      Object result = CGAL::intersection(to_check_1, prev);
+      // The intersection is a point.
+      if (CGAL::assign(intersection_point, result)) {
+        if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
+          std::cout << "Intersecting! prev1 " << intersection_point << std::endl;
+          return true;
+        }
+      }
+      result = CGAL::intersection(to_check_2, prev);
+      // The intersection is a point.
+      if (CGAL::assign(intersection_point, result)) {
+        if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
+          std::cout << "Intersecting! prev2 " << intersection_point << std::endl;
+          return true;
+        }
+      }
+    }
+
+    if(point == p4) {
+
+      int point_index = position_of_point_in_polygon(*polygon, point);
+
+      int next_edge = point_index;
+
+      if(point_index == (*polygon).size()) {
+        next_edge = 0;
+      }
+
+      Segment next = *((*polygon).edges_begin() + next_edge);
+
+      std::cout << "Vivaldi Bassoon Concerto... next = " << next << std::endl;
+
+      Point intersection_point;
+
+      Object result = CGAL::intersection(to_check_1, next);
+      // The intersection is a point.
+      if (CGAL::assign(intersection_point, result)) {
+        if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
+          std::cout << "Intersecting! next1 " << intersection_point << std::endl;
+          return true;
+        }
+      }
+      result = CGAL::intersection(to_check_2, next);
+      // The intersection is a point.
+      if (CGAL::assign(intersection_point, result)) {
+        if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
+          std::cout << "Intersecting! next2 " << intersection_point << std::endl;
+          return true;
+        }
+      }
+
+    }
 
     int point_index = position_of_point_in_polygon(*polygon, point);
 
@@ -47,7 +133,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
     Segment prev = *((*polygon).edges_begin() + previous_edge);
     Segment next = *((*polygon).edges_begin() + next_edge);
 
-    std::cout << "Vivaldi Bassoon Concerto... prev = " << prev << " next = " << next << std::endl;
+    // std::cout << "Vivaldi Bassoon Concerto... prev = " << prev << " next = " << next << std::endl;
 
     Point intersection_point;
 
@@ -90,7 +176,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
 }
 
 
-
+// Checks if a local step is valid.
 bool step_is_valid(Polygon* polygon, Tree* tree, Point p1, Point p2, Point p3, Point p4) {
 
   Point HighestX, HighestY, LowestX, LowestY;
@@ -155,7 +241,9 @@ bool step_is_valid(Polygon* polygon, Tree* tree, Point p1, Point p2, Point p3, P
 }
 
 
-
+// Performs and checks validity of global step. 
+// Returns true if the step is valid and the polygon is changed.
+// Returns false if the step is invalid and the polygon stays the same.
 bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(Point(-1,-1), Point(-2,-2))) {
 
   Polygon new_polygon = *polygon;
@@ -230,6 +318,9 @@ bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(
 }
 
 
+// Performs and checks validity of local step. 
+// Returns true if the step is valid and the polygon is changed.
+// Returns false if the step is invalid and the polygon stays the same.
 bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
   Polygon new_polygon = *polygon;
@@ -253,7 +344,7 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
     previous_of_q = new_polygon.size() - 1;
   }
 
-  int next_of_q =  point_q + 1;
+  int next_of_q = point_q + 1;
   if(point_q == new_polygon.size() - 1) {
     next_of_q = 0;
   }
@@ -274,6 +365,13 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
   std::cout << "Διαγράφω το NextQ " << *(new_polygon.begin() + next_of_q) << std::endl;
   new_polygon.erase(new_polygon.begin() + next_of_q);
   print_polygon(new_polygon);
+
+
+  if(next_of_q == 0) {
+    previous_of_q--;
+    point_q--;
+    second_after_q--;
+  }
 
 
   std::cout << "Προσθέτω το R = " << NextQ << " πριν το σημείο Q = " << Q << std::endl;
@@ -555,23 +653,71 @@ double energy2 = compute_energy(polygon, ch_area, false);
 std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
 
 
-
-// Try global step till a valid step is made.
 Polygon old_polygon = polygon;
-while(!local_step(&polygon, &tree));
-// while(!global_step(&polygon));
+int L = 7000;
+double Temperature = 1.0;
+int goal = MINIMALIZATION;
+if(goal == MINIMALIZATION) {
+
+  while(Temperature > 0) {
+
+    // Try global step till a valid step is made.
+    old_polygon = polygon;
+    while(!local_step(&polygon, &tree));
+    // while(!global_step(&polygon));
+    std::cout << std::endl;
+
+    double old_polygon_area = CGAL::abs(old_polygon.area());
+    double new_polygon_area = CGAL::abs(polygon.area());
+
+    double new_energy = compute_energy(polygon, ch_area, true);
+    // double new_energy2 = compute_energy(polygon, ch_area, false);
+
+    double min_difference = new_energy - energy;
+    // double max_difference = new_energy2 - energy2;
+
+    // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << " Max energy = " << new_energy2 << std::endl;
+    std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
+    // std::cout << "Min difference = " << min_difference << " Max Difference = " << max_difference << std::endl;
+    std::cout << "Min difference = " << min_difference << std::endl;
+
+    if((min_difference < 0) || (metropolis(min_difference, Temperature))) {
+      std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
+      energy = new_energy;
+    }
+    else {
+      std::cout << "Δεν περνάς δεν περνάς." << std::endl;
+      polygon = old_polygon;
+    }
 
 
+    // double aykala = 1.0 / (double) L;
+    // std::cout << "OJPA! aykala = " << aykala << std::endl; 
+    // // Temperature = (double) (Temperature - (double) (1 / L));
+    // Temperature = (double) (Temperature - aykala);
 
 
+    Temperature -= (1.0 / (double) L);
+    std::cout << "Temperature = " << Temperature << std::endl;
+    print_polygon(polygon);
 
 
-std::cout << std::endl;
-if(local_step(&polygon, &tree)) {
-  std::cout << "Κάτι άλλαξεεε!" << std::endl;
+  }
+
+
 }
-else
-  std::cout << "Τίποτα δεν άλλαξε..." << std::endl;
+
+
+std::cout << "Convex Hull Area = " << ch_area << std::endl;
+std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
+
+
+// std::cout << std::endl;
+// if(local_step(&polygon, &tree)) {
+//   std::cout << "Κάτι άλλαξεεε!" << std::endl;
+// }
+// else
+//   std::cout << "Τίποτα δεν άλλαξε..." << std::endl;
 
 
 // print_polygon(polygon);
