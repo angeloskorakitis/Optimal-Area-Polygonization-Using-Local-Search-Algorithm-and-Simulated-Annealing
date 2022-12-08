@@ -4,7 +4,17 @@
 #include <ctime>
 
 #pragma one;
-enum { MINIMALIZATION = 6, MAXIMALIZATION = 7 };
+enum { MINIMALIZATION = 1, MAXIMALIZATION = 0 };
+
+
+bool comparePoints(Point a, Point b) {
+  if(a.x() < b.x()) return true;
+  else if(a.x() > b.x()) return false;
+  else {
+    if(a.y() < b.y()) return true;
+    else return false;
+  }
+}
 
 
 // Returns true if Metropolis criterion holds, false otherwise.
@@ -14,7 +24,7 @@ bool metropolis(double difference, double temperature) {
   double random_number = ( (double) rand() / (double) RAND_MAX);
 
   double number = exp( -difference / temperature);
-  std::cout << "Metropolis! Numb = " << number << " R = " << random_number << std::endl;
+  // std::cout << "Metropolis! Numb = " << number << " R = " << random_number << std::endl;
   if(number >= random_number) return true;
   else return false;
 }
@@ -61,7 +71,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
 
       Segment prev = *((*polygon).edges_begin() + previous_edge);
 
-      std::cout << "Vivaldi Bassoon Concerto... prev = " << prev << std::endl;
+      // std::cout << "Vivaldi Bassoon Concerto... prev = " << prev << std::endl;
 
       Point intersection_point;
 
@@ -69,7 +79,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
       // The intersection is a point.
       if (CGAL::assign(intersection_point, result)) {
         if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-          std::cout << "Intersecting! prev1 " << intersection_point << std::endl;
+          // std::cout << "Intersecting! prev1 " << intersection_point << std::endl;
           return true;
         }
       }
@@ -77,7 +87,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
       // The intersection is a point.
       if (CGAL::assign(intersection_point, result)) {
         if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-          std::cout << "Intersecting! prev2 " << intersection_point << std::endl;
+          // std::cout << "Intersecting! prev2 " << intersection_point << std::endl;
           return true;
         }
       }
@@ -95,7 +105,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
 
       Segment next = *((*polygon).edges_begin() + next_edge);
 
-      std::cout << "Vivaldi Bassoon Concerto... next = " << next << std::endl;
+      // std::cout << "Vivaldi Bassoon Concerto... next = " << next << std::endl;
 
       Point intersection_point;
 
@@ -103,7 +113,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
       // The intersection is a point.
       if (CGAL::assign(intersection_point, result)) {
         if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-          std::cout << "Intersecting! next1 " << intersection_point << std::endl;
+          // std::cout << "Intersecting! next1 " << intersection_point << std::endl;
           return true;
         }
       }
@@ -111,7 +121,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
       // The intersection is a point.
       if (CGAL::assign(intersection_point, result)) {
         if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-          std::cout << "Intersecting! next2 " << intersection_point << std::endl;
+          // std::cout << "Intersecting! next2 " << intersection_point << std::endl;
           return true;
         }
       }
@@ -141,7 +151,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
     // The intersection is a point.
     if (CGAL::assign(intersection_point, result)) {
       if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-        std::cout << "Intersecting! prev1 " << intersection_point << std::endl;
+        // std::cout << "Intersecting! prev1 " << intersection_point << std::endl;
         return true;
       }
     }
@@ -149,7 +159,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
     // The intersection is a point.
     if (CGAL::assign(intersection_point, result)) {
       if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-        std::cout << "Intersecting! next1 " << intersection_point << std::endl;
+        // std::cout << "Intersecting! next1 " << intersection_point << std::endl;
         return true;
       }
     }
@@ -157,7 +167,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
     // The intersection is a point.
     if (CGAL::assign(intersection_point, result)) {
       if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-        std::cout << "Intersecting! prev2 " << intersection_point << std::endl;
+        // std::cout << "Intersecting! prev2 " << intersection_point << std::endl;
         return true;
       }
     }
@@ -165,7 +175,7 @@ bool edges_in_box_intersect(Polygon* polygon, Point p1, Point p2, Point p3, Poin
     // The intersection is a point.
     if (CGAL::assign(intersection_point, result)) {
       if((!(intersection_point == p1)) && (!(intersection_point == p2)) && (!(intersection_point == p3)) && (!(intersection_point == p4))) {
-        std::cout << "Intersecting! next2 " << intersection_point << std::endl;
+        // std::cout << "Intersecting! next2 " << intersection_point << std::endl;
         return true;
       }
     }
@@ -208,8 +218,8 @@ bool step_is_valid(Polygon* polygon, Tree* tree, Point p1, Point p2, Point p3, P
   Point Corner1(LowestX.x(), LowestY.y());
   Point Corner2(HighestX.x(), HighestY.y());
 
-  std::cout << "About to check my box: LowestX = " << LowestX << " LowestY = " << LowestY << " HighestX =  " << HighestX << " HighestY = " << HighestY;
-  std::cout << " Corner1 = " << Corner1 << " Corner2 = " << Corner2 << std::endl;
+  // std::cout << "About to check my box: LowestX = " << LowestX << " LowestY = " << LowestY << " HighestX =  " << HighestX << " HighestY = " << HighestY;
+  // std::cout << " Corner1 = " << Corner1 << " Corner2 = " << Corner2 << std::endl;
 
   Box checkbox(Corner1, Corner2);
 
@@ -231,7 +241,7 @@ bool step_is_valid(Polygon* polygon, Tree* tree, Point p1, Point p2, Point p3, P
     perror("Error deleting file");
 
 
-  print_point_vector(in_the_box_points);
+  // print_point_vector(in_the_box_points);
 
   if(edges_in_box_intersect(polygon, p1, p2, p3, p4, in_the_box_points))
     return false;
@@ -257,19 +267,12 @@ bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(
     point_q = position_of_point_in_polygon(new_polygon, Q);
   }
 
-  
-  if(point_q == -1) return false;
-
-  int previous_of_q = point_q - 1;
-
-  if(point_q == 0) {
-    previous_of_q = new_polygon.size() - 1;
-  }
-  
-  
   int point_s;
   if(ST == Segment(Point(-1,-1), Point(-2,-2))) {
-    point_s = rand() % (*polygon).size();
+    do {
+      point_s = rand() % (*polygon).size();
+    // Make sure Q != S and Q != T.
+    } while((point_s == point_q) || ((point_s + 1) == point_q) || ((point_s == ((*polygon).size() - 1)) && (point_q == 0)));
   }
   else {
     point_s = position_of_segment_in_polygon(new_polygon, ST);
@@ -282,36 +285,37 @@ bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(
     point_t = 0;
 
 
-  
-  Point PrevQ = *(new_polygon.begin() + previous_of_q);
+  Q = *((*polygon).begin() + point_q);
+  Point S = *((*polygon).begin() + point_s);
+  Point T = *((*polygon).begin() + point_t);
 
 
-  std::cout << "\tQ = " << Q << " S = " << ST.source() << " T = " << ST.target() << std::endl;
-  std::cout << "\tPrevQ = " << PrevQ << std::endl;
+  // std::cout << "\tQ = " << Q << " S = " << S << " T = " << T << std::endl;
 
-  std::cout << "Προσθέτω το Q = " << Q << " πριν το σημείο T = " << ST.target() << std::endl;
-  new_polygon.insert(new_polygon.begin() + point_t, Q);
-  int new_point_q = point_t++;
-
-  if(point_t <= point_q) {
-    point_q++;
-    previous_of_q++;
-  }
-
-  std::cout << "Διαγράφω το " << *(new_polygon.begin() + point_q) << std::endl;
+  // std::cout << "Διαγράφω το " << *(new_polygon.begin() + point_q) << std::endl;
   new_polygon.erase(new_polygon.begin() + point_q);
+  // print_polygon(new_polygon);
 
   if(point_q < point_s) {
     point_s--;
-    new_point_q--;
     point_t--;
   }
 
+  if(point_s == -1) point_s = new_polygon.size();
+  if(point_t == -1) point_t = new_polygon.size();
+
+
+  // std::cout << "Προσθέτω το Q = " << Q << " πριν το σημείο T = " << T << " point t = " << point_t << std::endl;
+  new_polygon.insert(new_polygon.begin() + point_t, Q);
+
+
   if(new_polygon.is_simple()) {
     *polygon = new_polygon;
+    // std::cout << "Valid!" << std::endl;
     return true;
   }
   else {
+    // std::cout << "Reject..." << std::endl;
     return false;
   }
 
@@ -360,11 +364,11 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
   Point SecondAfterQ  = *(new_polygon.begin() + second_after_q);
 
 
-  std::cout << "\tQ = " << Q << " Previous = " << PrevQ << " Next = " << NextQ << std::endl;
+  // std::cout << "\tQ = " << Q << " Previous = " << PrevQ << " Next = " << NextQ << std::endl;
 
-  std::cout << "Διαγράφω το NextQ " << *(new_polygon.begin() + next_of_q) << std::endl;
+  // std::cout << "Διαγράφω το NextQ " << *(new_polygon.begin() + next_of_q) << std::endl;
   new_polygon.erase(new_polygon.begin() + next_of_q);
-  print_polygon(new_polygon);
+  // print_polygon(new_polygon);
 
 
   if(next_of_q == 0) {
@@ -374,30 +378,31 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
   }
 
 
-  std::cout << "Προσθέτω το R = " << NextQ << " πριν το σημείο Q = " << Q << std::endl;
+  // std::cout << "Προσθέτω το R = " << NextQ << " πριν το σημείο Q = " << Q << std::endl;
   new_polygon.insert(new_polygon.begin() + point_q, NextQ);
-  print_polygon(new_polygon);
+  // print_polygon(new_polygon);
 
   // Checking if the new edges are intersecting. 
   Segment edge1(PrevQ, NextQ);
   Segment edge2(Q, SecondAfterQ);
 
-  std::cout << " Edge 1 = " << edge1 << " Edge 2 = " << edge2 << std::endl;
+  // std::cout << " Edge 1 = " << edge1 << " Edge 2 = " << edge2 << std::endl;
 
   Point intersection_point;
-
+  
+  
   Object result = CGAL::intersection(edge1, edge2);
 
   // The intersection is a point.
   if (CGAL::assign(intersection_point, result)) {
-    std::cout << "Intersecting! " << intersection_point << std::endl;
+    // std::cout << "Intersecting! " << intersection_point << std::endl;
     return false;
   }
 
 
 
 
-  if(step_is_valid(&new_polygon, tree, PrevQ, Q, NextQ, SecondAfterQ)) {
+  if(step_is_valid(&new_polygon, tree, PrevQ, Q, NextQ, SecondAfterQ) && new_polygon.is_simple()) {
     *polygon = new_polygon;
     return true;
   }
@@ -529,11 +534,19 @@ int main(int argc, char *argv[]) {
 // exit(EXIT_SUCCESS);
 
 
+// Polygon teeest;
+// teeest.push_back(Point(0, 0));
+// // teeest.push_back(Point(5, 5));
+// teeest.push_back(Point(10, 10));
+// teeest.push_back(Point(7, 7));
+// teeest.push_back(Point(0, 10));
+
+// print_polygon(teeest);
+
+// std::cout << "Η στιγμή της αλήθειας... is simple...? " << teeest.is_simple() << std::endl;
 
 
-
-
-
+// exit(EXIT_SUCCESS);
 
 
 
@@ -595,6 +608,143 @@ int main(int argc, char *argv[]) {
 
   srand(time(NULL));
 
+
+
+
+
+
+
+
+
+//////////////////////// SPATIAL SUBDIVISION /////////////
+
+PointVector testvec = points;
+
+// Sort points lexicografically.
+sort(testvec.begin(), testvec.end(), comparePoints);
+
+std::cout << "Sorting..." << std::endl;
+print_point_vector(testvec);
+
+
+int m = 4;
+int k = ceil((testvec.size() - 1) / (m - 1));
+
+
+std::cout << "K = " << k << std::endl;
+
+std::vector<PointVector*> sets;
+
+
+// Split points to k vectors of m points. 
+bool next_set = true;
+PointVector* set;
+for(int i = 0; i < testvec.size(); i++) {
+  if(next_set) {
+    set = new PointVector();
+    sets.push_back(set);
+    next_set = false;
+  }
+
+  set->push_back(testvec[i]);
+  if(set->size() == m) next_set = true;
+
+}
+
+
+// Sets has k points to vectors of m points each.
+for(int i = 0; i < sets.size(); i++) {
+  std::cout << "This is set no. " << i << std::endl;
+  std::cout << "Size of set = " << sets[i]->size() << std::endl;
+  print_point_vector(*sets[i]);
+}
+
+
+// 1.
+// Check all that need to be checked.
+// "Pin down" rightmost and leftmost edge. 
+
+// 2.
+// Apply Simulated Annealing with global step for each set. 
+// for(int i = 0; i < sets.size(); i++) {
+//   Polygon a_polygon = simulated_annealing(sets[i], ..., ..., ...);
+// }
+
+// 3.
+// Merge all polygons into one big polygon.
+
+// Free allocated memory.
+for(int i = 0; i < sets.size(); i++) {
+  delete sets[i];
+}
+
+
+return EXIT_SUCCESS;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   Polygon polygon;
   
   // Calling the algorihm function.
@@ -627,12 +777,7 @@ int main(int argc, char *argv[]) {
 
 print_polygon(polygon);
 
-// std::cout << std::endl;
-// if(global_step(&polygon, Point(0,0), Segment(Point(2,2), Point(2,4)))) {
-//   std::cout << "Κάτι άλλαξεεε!" << std::endl;
-// }
-// else
-//   std::cout << "Τίποτα δεν άλλαξε..." << std::endl;
+
 
 
 
@@ -642,74 +787,88 @@ Tree tree;
 for(int i = 0; i < points.size(); i++)
   tree.insert(points[i]);
 
+Polygon old_polygon;
+int L = 5000;
+double Temperature = 1.0;
+int goal = MINIMALIZATION;
+// int goal = MAXIMALIZATION;
+
+
 // Keep convex hull to check "energy".
 Polygon convex_hull;
 CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
 double ch_area = CGAL::abs(convex_hull.area());
 
-double energy = compute_energy(polygon, ch_area, true);
-double energy2 = compute_energy(polygon, ch_area, false);
+double energy = compute_energy(polygon, ch_area, goal);
 
-std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
-
-
-Polygon old_polygon = polygon;
-int L = 7000;
-double Temperature = 1.0;
-int goal = MINIMALIZATION;
-if(goal == MINIMALIZATION) {
-
-  while(Temperature > 0) {
-
-    // Try global step till a valid step is made.
-    old_polygon = polygon;
-    while(!local_step(&polygon, &tree));
-    // while(!global_step(&polygon));
-    std::cout << std::endl;
-
-    double old_polygon_area = CGAL::abs(old_polygon.area());
-    double new_polygon_area = CGAL::abs(polygon.area());
-
-    double new_energy = compute_energy(polygon, ch_area, true);
-    // double new_energy2 = compute_energy(polygon, ch_area, false);
-
-    double min_difference = new_energy - energy;
-    // double max_difference = new_energy2 - energy2;
-
-    // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << " Max energy = " << new_energy2 << std::endl;
-    std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
-    // std::cout << "Min difference = " << min_difference << " Max Difference = " << max_difference << std::endl;
-    std::cout << "Min difference = " << min_difference << std::endl;
-
-    if((min_difference < 0) || (metropolis(min_difference, Temperature))) {
-      std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
-      energy = new_energy;
-    }
-    else {
-      std::cout << "Δεν περνάς δεν περνάς." << std::endl;
-      polygon = old_polygon;
-    }
+// std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
 
 
-    // double aykala = 1.0 / (double) L;
-    // std::cout << "OJPA! aykala = " << aykala << std::endl; 
-    // // Temperature = (double) (Temperature - (double) (1 / L));
-    // Temperature = (double) (Temperature - aykala);
 
+while(Temperature > 0) {
 
-    Temperature -= (1.0 / (double) L);
-    std::cout << "Temperature = " << Temperature << std::endl;
-    print_polygon(polygon);
+  // Try global step till a valid step is made.
+  old_polygon = polygon;
+  // while(!local_step(&polygon, &tree));
+  while(!global_step(&polygon));
+  // std::cout << std::endl;
+  // print_polygon(polygon);
 
+  double new_polygon_area = CGAL::abs(polygon.area());
 
+  double new_energy = compute_energy(polygon, ch_area, goal);
+  // double new_energy2 = compute_energy(polygon, ch_area, false);
+
+  double difference = new_energy - energy;
+
+  // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
+  // std::cout << "Difference = " << difference << std::endl;
+
+  if((difference < 0) || (metropolis(difference, Temperature))) {
+    // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
+    // The change passes. The polygon is updated.
+    energy = new_energy;
   }
+  else {
+    // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
+    // The change is rejected. The polygon is not updated.
+    polygon = old_polygon;
+  }
+
+
+  // double aykala = 1.0 / (double) L;
+  // std::cout << "OJPA! aykala = " << aykala << std::endl; 
+  // // Temperature = (double) (Temperature - (double) (1 / L));
+  // Temperature = (double) (Temperature - aykala);
+
+
+  Temperature -= (1.0 / (double) L);
+  // std::cout << "Temperature = " << Temperature << std::endl;
 
 
 }
 
 
+
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+    print_polygon(polygon);
 std::cout << "Convex Hull Area = " << ch_area << std::endl;
 std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
+std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
+
+
+
+  std::filebuf fb;
+  fb.open("mylog", std::ios::out);
+  std::ostream os(&fb);
+  for(int i = 0; i < polygon.size(); i++) {
+    Point point = *(polygon.begin() + i);
+    os << point << std::endl;
+  }
+  fb.close();
 
 
 // std::cout << std::endl;
@@ -747,5 +906,11 @@ std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
 
   return EXIT_SUCCESS;
 }
+
+
+
+
+
+
 
 
