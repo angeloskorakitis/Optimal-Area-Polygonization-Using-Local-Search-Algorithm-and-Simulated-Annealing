@@ -153,7 +153,7 @@ int main(int argc, char *argv[])
 
 
   // If the polygon is not simple then failure
-  if(!polygon.is_simple()) return EXIT_FAILURE;
+  if(!polygon_initial.is_simple()) return EXIT_FAILURE;
 
   // If the polygon is not simple then failure
   if(!polygon.is_simple()) return EXIT_FAILURE;

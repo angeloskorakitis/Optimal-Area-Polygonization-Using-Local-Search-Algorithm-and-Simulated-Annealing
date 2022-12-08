@@ -38,9 +38,7 @@ typedef std::vector<VertexCirculator>                         VertexCirculatorVe
 typedef VertexCirculatorVector::iterator                      pVertexCirculatorVector;
 typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
-typedef std::string                                           String;
-// typedef std::vector<PolygonChanges>                           PolygonChangesVector;
-// typedef PolygonChangesVector::iterator                        pPolygonChangesVector;            
+typedef std::string                                           String;    
 
 //______________________________Input/Output functions___________________________________
 
