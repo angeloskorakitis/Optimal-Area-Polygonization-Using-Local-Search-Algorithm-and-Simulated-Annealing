@@ -9,8 +9,21 @@
 
 #include "Local_Search_Area-Optimal_Polygonization.hpp"
 
+bool compare_delta(double temp_delta, double delta, String optimization)
+{
+    if(optimization == "max")
+    {
+        // If temp_delta is larger than delta...
+        if(temp_delta > delta) return true;
+        return false;
+    }
 
-Polygon local_search(Polygon polygon, double threshold, int L)
+    // If optimization is min
+    if(temp_delta < delta) return true;
+    return false;
+}
+
+Polygon local_search(Polygon polygon, double threshold, int L, String optimization)
 {
     Polygon new_polygon = polygon;
 
@@ -26,22 +39,22 @@ Polygon local_search(Polygon polygon, double threshold, int L)
 
     // For set of points bigger that 500 we check at random 20 edges to perform the algorithm.
     // See more in the documentation.
-    static int max_edge_check = 20;
+    static int max_edge_check = 10;
     static int threshold_polygon_size = 500;
 
     double delta=threshold;
     
     // The local search algorithm...
-    while(delta >= threshold)
+    while(std::abs(delta) >= threshold)
     {
 
         delta = 0.0;
 
         // for every edge of the polygon...
-        for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr <= polygon.edges_end(); ++edge_itr) 
+        for (EdgeIterator edge_itr = polygon.edges_begin(); edge_itr < polygon.edges_end(); ++edge_itr) 
         {
 
-            // Checks the polygon size according to documentation
+            // Checks the polygon size and threshold. More are explaned in the documentation.
             if(polygon.size() >= threshold_polygon_size)
             {
                 edge_itr = polygon.edges_begin() + rand()%polygon.size();
@@ -53,6 +66,7 @@ Polygon local_search(Polygon polygon, double threshold, int L)
             // Checks path of size 1, i.e segments till L, i.e L segments
             for(int k = 1; k <= L; k++)
             {
+
                 VertexCirculator start_vertex_circ = polygon.vertices_circulator();
 
                 // Iterate through the polygon to perform the local search step
@@ -76,7 +90,7 @@ Polygon local_search(Polygon polygon, double threshold, int L)
                     double temp_delta = (double)(temp_area - area)/convex_hull_area;
 
                     // Check delta. If temp delta is bigger then keep the temp_polygon.
-                    if(temp_delta > delta)
+                    if(compare_delta(temp_delta,delta,optimization))
                     {
                         new_polygon = temp_polygon;
                         delta = temp_delta;

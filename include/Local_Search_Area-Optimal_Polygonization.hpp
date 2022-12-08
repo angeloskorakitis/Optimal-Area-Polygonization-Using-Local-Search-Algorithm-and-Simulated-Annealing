@@ -8,9 +8,11 @@
 
 #include "Utilities.hpp"
 
+bool compare_delta(double temp_delta,double delta, String optimization);
+
 // Returns a polygon after the local search given the threshold and L, the maximum number of paths we are going to search.
 
-Polygon local_search(Polygon polygon, double threshold, int L);
+Polygon local_search(Polygon polygon, double threshold, int L, String optimization);
 
 // Performs the path changes to the polygon. If the polygon is simple after the changes it returns it, else it returns the initial polygon.
 

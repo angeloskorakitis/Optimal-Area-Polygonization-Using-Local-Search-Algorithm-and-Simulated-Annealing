@@ -2134,7 +2134,106 @@ CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
+  /opt/homebrew/include/CGAL/Search_traits_2.h \
+  /opt/homebrew/include/CGAL/license/Spatial_searching.h \
+  /opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Kd_tree_node.h \
+  /opt/homebrew/include/CGAL/Splitters.h \
+  /opt/homebrew/include/CGAL/Point_container.h \
+  /opt/homebrew/include/CGAL/Kd_tree_rectangle.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /opt/homebrew/include/CGAL/Plane_separator.h \
+  /opt/homebrew/include/CGAL/Compact_container.h \
+  /opt/homebrew/include/CGAL/iterator.h \
+  /opt/homebrew/include/CGAL/CC_safe_handle.h \
+  /opt/homebrew/include/CGAL/Time_stamper.h \
+  /opt/homebrew/include/CGAL/Has_timestamp.h \
+  /opt/homebrew/include/CGAL/Has_member.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /opt/homebrew/include/CGAL/Kd_tree.h \
+  /opt/homebrew/include/boost/container/deque.hpp \
+  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/container/detail/workaround.hpp \
+  /opt/homebrew/include/boost/container/allocator_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
+  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
+  /opt/homebrew/include/boost/container/new_allocator.hpp \
+  /opt/homebrew/include/boost/container/throw_exception.hpp \
+  /opt/homebrew/include/boost/core/ignore_unused.hpp \
+  /opt/homebrew/include/boost/container/options.hpp \
+  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
+  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
+  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
+  /opt/homebrew/include/boost/container/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
+  /opt/homebrew/include/boost/container/detail/iterators.hpp \
+  /opt/homebrew/include/boost/container/detail/value_init.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
+  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
+  /opt/homebrew/include/boost/container/detail/version_type.hpp \
+  /opt/homebrew/include/boost/move/iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
+  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
+  /opt/homebrew/include/boost/container/detail/min_max.hpp \
+  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
+  /opt/homebrew/include/CGAL/mutex.h \
+  /opt/homebrew/include/CGAL/Euclidean_distance.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /opt/homebrew/include/CGAL/Fuzzy_iso_box.h \
+  /opt/homebrew/include/CGAL/Search_traits_adapter.h \
+  /opt/homebrew/include/CGAL/property_map.h \
+  /opt/homebrew/include/CGAL/value_type_traits.h \
+  /opt/homebrew/include/boost/property_map/property_map.hpp \
+  /opt/homebrew/include/boost/concept_archetype.hpp \
+  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp
 
 CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
@@ -4269,7 +4368,106 @@ CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
+  /opt/homebrew/include/CGAL/Search_traits_2.h \
+  /opt/homebrew/include/CGAL/license/Spatial_searching.h \
+  /opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Kd_tree_node.h \
+  /opt/homebrew/include/CGAL/Splitters.h \
+  /opt/homebrew/include/CGAL/Point_container.h \
+  /opt/homebrew/include/CGAL/Kd_tree_rectangle.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /opt/homebrew/include/CGAL/Plane_separator.h \
+  /opt/homebrew/include/CGAL/Compact_container.h \
+  /opt/homebrew/include/CGAL/iterator.h \
+  /opt/homebrew/include/CGAL/CC_safe_handle.h \
+  /opt/homebrew/include/CGAL/Time_stamper.h \
+  /opt/homebrew/include/CGAL/Has_timestamp.h \
+  /opt/homebrew/include/CGAL/Has_member.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /opt/homebrew/include/CGAL/Kd_tree.h \
+  /opt/homebrew/include/boost/container/deque.hpp \
+  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/container/detail/workaround.hpp \
+  /opt/homebrew/include/boost/container/allocator_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
+  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
+  /opt/homebrew/include/boost/container/new_allocator.hpp \
+  /opt/homebrew/include/boost/container/throw_exception.hpp \
+  /opt/homebrew/include/boost/core/ignore_unused.hpp \
+  /opt/homebrew/include/boost/container/options.hpp \
+  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
+  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
+  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
+  /opt/homebrew/include/boost/container/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
+  /opt/homebrew/include/boost/container/detail/iterators.hpp \
+  /opt/homebrew/include/boost/container/detail/value_init.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
+  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
+  /opt/homebrew/include/boost/container/detail/version_type.hpp \
+  /opt/homebrew/include/boost/move/iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
+  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
+  /opt/homebrew/include/boost/container/detail/min_max.hpp \
+  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
+  /opt/homebrew/include/CGAL/mutex.h \
+  /opt/homebrew/include/CGAL/Euclidean_distance.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /opt/homebrew/include/CGAL/Fuzzy_iso_box.h \
+  /opt/homebrew/include/CGAL/Search_traits_adapter.h \
+  /opt/homebrew/include/CGAL/property_map.h \
+  /opt/homebrew/include/CGAL/value_type_traits.h \
+  /opt/homebrew/include/boost/property_map/property_map.hpp \
+  /opt/homebrew/include/boost/concept_archetype.hpp \
+  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp
 
 CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Incremental_Algorithm.cpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Incremental_Algorithm.hpp \
@@ -6404,7 +6602,106 @@ CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
+  /opt/homebrew/include/CGAL/Search_traits_2.h \
+  /opt/homebrew/include/CGAL/license/Spatial_searching.h \
+  /opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Kd_tree_node.h \
+  /opt/homebrew/include/CGAL/Splitters.h \
+  /opt/homebrew/include/CGAL/Point_container.h \
+  /opt/homebrew/include/CGAL/Kd_tree_rectangle.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /opt/homebrew/include/CGAL/Plane_separator.h \
+  /opt/homebrew/include/CGAL/Compact_container.h \
+  /opt/homebrew/include/CGAL/iterator.h \
+  /opt/homebrew/include/CGAL/CC_safe_handle.h \
+  /opt/homebrew/include/CGAL/Time_stamper.h \
+  /opt/homebrew/include/CGAL/Has_timestamp.h \
+  /opt/homebrew/include/CGAL/Has_member.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /opt/homebrew/include/CGAL/Kd_tree.h \
+  /opt/homebrew/include/boost/container/deque.hpp \
+  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/container/detail/workaround.hpp \
+  /opt/homebrew/include/boost/container/allocator_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
+  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
+  /opt/homebrew/include/boost/container/new_allocator.hpp \
+  /opt/homebrew/include/boost/container/throw_exception.hpp \
+  /opt/homebrew/include/boost/core/ignore_unused.hpp \
+  /opt/homebrew/include/boost/container/options.hpp \
+  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
+  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
+  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
+  /opt/homebrew/include/boost/container/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
+  /opt/homebrew/include/boost/container/detail/iterators.hpp \
+  /opt/homebrew/include/boost/container/detail/value_init.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
+  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
+  /opt/homebrew/include/boost/container/detail/version_type.hpp \
+  /opt/homebrew/include/boost/move/iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
+  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
+  /opt/homebrew/include/boost/container/detail/min_max.hpp \
+  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
+  /opt/homebrew/include/CGAL/mutex.h \
+  /opt/homebrew/include/CGAL/Euclidean_distance.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /opt/homebrew/include/CGAL/Fuzzy_iso_box.h \
+  /opt/homebrew/include/CGAL/Search_traits_adapter.h \
+  /opt/homebrew/include/CGAL/property_map.h \
+  /opt/homebrew/include/CGAL/value_type_traits.h \
+  /opt/homebrew/include/boost/property_map/property_map.hpp \
+  /opt/homebrew/include/boost/concept_archetype.hpp \
+  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp
 
 CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Utilities.hpp \
@@ -8538,7 +8835,106 @@ CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
-  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h
+  /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
+  /opt/homebrew/include/CGAL/Search_traits_2.h \
+  /opt/homebrew/include/CGAL/license/Spatial_searching.h \
+  /opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Kd_tree_node.h \
+  /opt/homebrew/include/CGAL/Splitters.h \
+  /opt/homebrew/include/CGAL/Point_container.h \
+  /opt/homebrew/include/CGAL/Kd_tree_rectangle.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /opt/homebrew/include/CGAL/Plane_separator.h \
+  /opt/homebrew/include/CGAL/Compact_container.h \
+  /opt/homebrew/include/CGAL/iterator.h \
+  /opt/homebrew/include/CGAL/CC_safe_handle.h \
+  /opt/homebrew/include/CGAL/Time_stamper.h \
+  /opt/homebrew/include/CGAL/Has_timestamp.h \
+  /opt/homebrew/include/CGAL/Has_member.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /opt/homebrew/include/CGAL/Kd_tree.h \
+  /opt/homebrew/include/boost/container/deque.hpp \
+  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/container/detail/workaround.hpp \
+  /opt/homebrew/include/boost/container/allocator_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
+  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
+  /opt/homebrew/include/boost/container/new_allocator.hpp \
+  /opt/homebrew/include/boost/container/throw_exception.hpp \
+  /opt/homebrew/include/boost/core/ignore_unused.hpp \
+  /opt/homebrew/include/boost/container/options.hpp \
+  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
+  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
+  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
+  /opt/homebrew/include/boost/container/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
+  /opt/homebrew/include/boost/container/detail/iterators.hpp \
+  /opt/homebrew/include/boost/container/detail/value_init.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
+  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
+  /opt/homebrew/include/boost/container/detail/version_type.hpp \
+  /opt/homebrew/include/boost/move/iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
+  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
+  /opt/homebrew/include/boost/container/detail/min_max.hpp \
+  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
+  /opt/homebrew/include/CGAL/mutex.h \
+  /opt/homebrew/include/CGAL/Euclidean_distance.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /opt/homebrew/include/CGAL/Fuzzy_iso_box.h \
+  /opt/homebrew/include/CGAL/Search_traits_adapter.h \
+  /opt/homebrew/include/CGAL/property_map.h \
+  /opt/homebrew/include/CGAL/value_type_traits.h \
+  /opt/homebrew/include/boost/property_map/property_map.hpp \
+  /opt/homebrew/include/boost/concept_archetype.hpp \
+  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp
 
 CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/main.cpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Incremental_Algorithm.hpp \
@@ -10674,6 +11070,105 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
   /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_impl.h \
+  /opt/homebrew/include/CGAL/Search_traits_2.h \
+  /opt/homebrew/include/CGAL/license/Spatial_searching.h \
+  /opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /opt/homebrew/include/CGAL/Kd_tree_node.h \
+  /opt/homebrew/include/CGAL/Splitters.h \
+  /opt/homebrew/include/CGAL/Point_container.h \
+  /opt/homebrew/include/CGAL/Kd_tree_rectangle.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /opt/homebrew/include/CGAL/Plane_separator.h \
+  /opt/homebrew/include/CGAL/Compact_container.h \
+  /opt/homebrew/include/CGAL/iterator.h \
+  /opt/homebrew/include/CGAL/CC_safe_handle.h \
+  /opt/homebrew/include/CGAL/Time_stamper.h \
+  /opt/homebrew/include/CGAL/Has_timestamp.h \
+  /opt/homebrew/include/CGAL/Has_member.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /opt/homebrew/include/CGAL/Kd_tree.h \
+  /opt/homebrew/include/boost/container/deque.hpp \
+  /opt/homebrew/include/boost/container/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/container/detail/workaround.hpp \
+  /opt/homebrew/include/boost/container/allocator_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/mpl.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_begin.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/config_end.hpp \
+  /opt/homebrew/include/boost/container/detail/type_traits.hpp \
+  /opt/homebrew/include/boost/container/detail/placement_new.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_traits.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/workaround.hpp \
+  /opt/homebrew/include/boost/intrusive/pointer_rebind.hpp \
+  /opt/homebrew/include/boost/move/detail/pointer_element.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+  /opt/homebrew/include/boost/move/detail/fwd_macros.hpp \
+  /opt/homebrew/include/boost/container/new_allocator.hpp \
+  /opt/homebrew/include/boost/container/throw_exception.hpp \
+  /opt/homebrew/include/boost/core/ignore_unused.hpp \
+  /opt/homebrew/include/boost/container/options.hpp \
+  /opt/homebrew/include/boost/intrusive/pack_options.hpp \
+  /opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp \
+  /opt/homebrew/include/boost/container/detail/copy_move_algo.hpp \
+  /opt/homebrew/include/boost/container/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/iterator.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_traits.hpp \
+  /opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp \
+  /opt/homebrew/include/boost/container/detail/construct_in_place.hpp \
+  /opt/homebrew/include/boost/container/detail/iterators.hpp \
+  /opt/homebrew/include/boost/container/detail/value_init.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/reverse_iterator.hpp \
+  /opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp \
+  /opt/homebrew/include/boost/container/detail/destroyers.hpp \
+  /opt/homebrew/include/boost/container/detail/version_type.hpp \
+  /opt/homebrew/include/boost/move/iterator.hpp \
+  /opt/homebrew/include/boost/move/detail/force_ptr.hpp \
+  /opt/homebrew/include/boost/container/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/intrusive/detail/algorithm.hpp \
+  /opt/homebrew/include/boost/container/detail/alloc_helpers.hpp \
+  /opt/homebrew/include/boost/container/detail/min_max.hpp \
+  /opt/homebrew/include/boost/move/detail/move_helpers.hpp \
+  /opt/homebrew/include/CGAL/mutex.h \
+  /opt/homebrew/include/CGAL/Euclidean_distance.h \
+  /opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /opt/homebrew/include/CGAL/Fuzzy_iso_box.h \
+  /opt/homebrew/include/CGAL/Search_traits_adapter.h \
+  /opt/homebrew/include/CGAL/property_map.h \
+  /opt/homebrew/include/CGAL/value_type_traits.h \
+  /opt/homebrew/include/boost/property_map/property_map.hpp \
+  /opt/homebrew/include/boost/concept_archetype.hpp \
+  /opt/homebrew/include/boost/property_map/vector_property_map.hpp \
+  /opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp \
+  /opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /opt/homebrew/include/boost/config/pragma_message.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Local_Search_Area-Optimal_Polygonization.hpp
 
@@ -10681,6 +11176,90 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Incremental_Algorithm.hpp:
 
 /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/include/Polygonization_Using_Convex_Hull_Algorithm.hpp:
+
+/opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp:
+
+/opt/homebrew/include/boost/config/pragma_message.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_thread_pause.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/spinlock.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/spinlock_pool.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_convertible.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base.hpp:
+
+/opt/homebrew/include/boost/property_map/vector_property_map.hpp:
+
+/opt/homebrew/include/boost/concept_archetype.hpp:
+
+/opt/homebrew/include/boost/property_map/property_map.hpp:
+
+/opt/homebrew/include/CGAL/value_type_traits.h:
+
+/opt/homebrew/include/CGAL/Search_traits_adapter.h:
+
+/opt/homebrew/include/CGAL/Euclidean_distance.h:
+
+/opt/homebrew/include/boost/intrusive/detail/algorithm.hpp:
+
+/opt/homebrew/include/boost/container/detail/algorithm.hpp:
+
+/opt/homebrew/include/boost/container/detail/iterators.hpp:
+
+/opt/homebrew/include/boost/move/detail/to_raw_pointer.hpp:
+
+/opt/homebrew/include/boost/intrusive/detail/iterator.hpp:
+
+/opt/homebrew/include/boost/container/options.hpp:
+
+/opt/homebrew/include/boost/core/ignore_unused.hpp:
+
+/opt/homebrew/include/boost/container/throw_exception.hpp:
+
+/opt/homebrew/include/boost/move/detail/fwd_macros.hpp:
+
+/opt/homebrew/include/boost/intrusive/pointer_rebind.hpp:
+
+/opt/homebrew/include/boost/intrusive/detail/workaround.hpp:
+
+/opt/homebrew/include/boost/container/detail/type_traits.hpp:
+
+/opt/homebrew/include/boost/container/detail/config_end.hpp:
+
+/opt/homebrew/include/boost/intrusive/detail/config_end.hpp:
+
+/opt/homebrew/include/boost/container/allocator_traits.hpp:
+
+/opt/homebrew/include/boost/container/detail/workaround.hpp:
+
+/opt/homebrew/include/CGAL/Kd_tree.h:
+
+/opt/homebrew/include/CGAL/CC_safe_handle.h:
+
+/opt/homebrew/include/CGAL/iterator.h:
+
+/opt/homebrew/include/CGAL/Compact_container.h:
+
+/opt/homebrew/include/CGAL/Point_container.h:
+
+/opt/homebrew/include/CGAL/Kd_tree_node.h:
+
+/opt/homebrew/include/CGAL/Spatial_searching/internal/K_neighbor_search.h:
+
+/opt/homebrew/include/CGAL/Search_traits_2.h:
 
 /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h:
 
@@ -10691,6 +11270,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Utilities.cpp:
 
 /opt/homebrew/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h:
+
+/opt/homebrew/include/boost/container/detail/copy_move_algo.hpp:
 
 /opt/homebrew/include/CGAL/circulator_bases.h:
 
@@ -10709,6 +11290,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Convex_hull_2/convexity_check_2_impl.h:
 
 /opt/homebrew/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h:
+
+/opt/homebrew/include/CGAL/Orthogonal_k_neighbor_search.h:
 
 /opt/homebrew/include/CGAL/ch_akl_toussaint.h:
 
@@ -10741,6 +11324,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/type_traits/is_final.hpp:
 
 /opt/homebrew/include/boost/type_traits/is_copy_assignable.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/yield_k.hpp:
 
 /opt/homebrew/include/boost/type_traits/is_complex.hpp:
 
@@ -10800,6 +11385,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h:
 
+/opt/homebrew/include/boost/intrusive/pointer_traits.hpp:
+
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
@@ -10811,6 +11398,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h:
+
+/opt/homebrew/include/boost/container/detail/alloc_helpers.hpp:
 
 /opt/homebrew/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h:
 
@@ -11000,6 +11589,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Chinese_remainder_traits.h:
 
+/opt/homebrew/include/CGAL/mutex.h:
+
 /opt/homebrew/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
 
 /opt/homebrew/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h:
@@ -11009,6 +11600,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Sqrt_extension/Real_embeddable_traits.h:
 
 /opt/homebrew/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h:
+
+/opt/homebrew/include/CGAL/license/Spatial_searching.h:
 
 /opt/homebrew/include/CGAL/Interval_arithmetic.h:
 
@@ -11080,6 +11673,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/mpl/vector/aux_/push_back.hpp:
 
+/opt/homebrew/include/boost/container/detail/value_init.hpp:
+
 /opt/homebrew/include/boost/mpl/vector/aux_/pop_front.hpp:
 
 /opt/homebrew/include/boost/mpl/vector/aux_/push_front.hpp:
@@ -11094,6 +11689,10 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/mpl/vector/vector10.hpp:
 
+/opt/homebrew/include/boost/move/detail/move_helpers.hpp:
+
+/opt/homebrew/include/boost/intrusive/detail/has_member_function_callable_with.hpp:
+
 /opt/homebrew/include/boost/mpl/limits/vector.hpp:
 
 /opt/homebrew/include/boost/mpl/remove.hpp:
@@ -11101,6 +11700,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/ch_selected_extreme_points_2.h:
 
 /opt/homebrew/include/CGAL/Enum_converter.h:
+
+/opt/homebrew/include/boost/container/detail/iterator.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian_converter.h:
 
@@ -11204,6 +11805,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Intersections_3/Line_3_Triangle_3.h:
 
+/opt/homebrew/include/boost/container/detail/min_max.hpp:
+
 /opt/homebrew/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h:
@@ -11248,11 +11851,15 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h:
 
+/opt/homebrew/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h:
+
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h:
+
+/opt/homebrew/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h:
 
@@ -11267,6 +11874,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h:
+
+/opt/homebrew/include/CGAL/property_map.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h:
 
@@ -11285,6 +11894,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h:
 
 /opt/homebrew/include/CGAL/Intersections_3/Bbox_3_Segment_3.h:
+
+/opt/homebrew/include/boost/container/detail/destroyers.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h:
 
@@ -11329,6 +11940,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Triangle_2.h:
 
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Point_2.h:
+
+/opt/homebrew/include/boost/container/detail/version_type.hpp:
 
 /opt/homebrew/include/CGAL/Intersections_2/internal/Straight_2.h:
 
@@ -11398,6 +12011,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Distance_2/Line_2_Line_2.h:
 
+/opt/homebrew/include/boost/move/detail/force_ptr.hpp:
+
 /opt/homebrew/include/CGAL/Distance_2/Segment_2_Segment_2.h:
 
 /opt/homebrew/include/CGAL/Distance_2/Point_2_Ray_2.h:
@@ -11419,6 +12034,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/version.hpp:
 
 /opt/homebrew/include/CGAL/Cartesian/basic_constructions_3.h:
+
+/opt/homebrew/include/CGAL/Plane_separator.h:
 
 /opt/homebrew/include/CGAL/Cartesian/predicates_on_planes_3.h:
 
@@ -11445,6 +12062,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/_xlocale.h:
 
 /opt/homebrew/include/CGAL/Cartesian/point_constructions_2.h:
+
+/opt/homebrew/include/boost/intrusive/detail/reverse_iterator.hpp:
 
 /opt/homebrew/include/boost/preprocessor/seq/limits/fold_left_256.hpp:
 
@@ -11542,6 +12161,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/random/detail/mixmax_skip_N17.ipp:
 
+/opt/homebrew/include/boost/move/detail/reverse_iterator.hpp:
+
 /opt/homebrew/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h:
 
 /opt/homebrew/include/boost/random/mersenne_twister.hpp:
@@ -11630,6 +12251,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Triangle_3.h:
 
+/opt/homebrew/include/boost/smart_ptr/detail/shared_count.hpp:
+
 /opt/homebrew/include/boost/mpl/aux_/size_impl.hpp:
 
 /opt/homebrew/include/CGAL/Weighted_point_3.h:
@@ -11663,6 +12286,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/CGAL/Kernel/global_functions_2.h:
 
 /opt/homebrew/include/boost/random/normal_distribution.hpp:
+
+/opt/homebrew/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h:
 
 /opt/homebrew/include/CGAL/Kernel/global_functions.h:
 
@@ -11938,6 +12563,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Plane_3.h:
 
+/opt/homebrew/include/boost/move/detail/iterator_to_raw_pointer.hpp:
+
 /opt/homebrew/include/boost/type_traits/is_floating_point.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/iter_apply.hpp:
@@ -11969,6 +12596,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/mpl/aux_/front_impl.hpp:
 
 /opt/homebrew/include/boost/variant/detail/apply_visitor_unary.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/locale:
 
@@ -12022,6 +12651,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/mpl/list/aux_/push_back.hpp:
 
+/opt/homebrew/include/CGAL/Fuzzy_iso_box.h:
+
 /opt/homebrew/include/boost/mpl/list/aux_/pop_front.hpp:
 
 /opt/homebrew/include/boost/mpl/list/aux_/item.hpp:
@@ -12043,6 +12674,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/mpl/aux_/msvc_type.hpp:
 
 /opt/homebrew/include/boost/mpl/deref.hpp:
+
+/opt/homebrew/include/boost/detail/numeric_traits.hpp:
 
 /opt/homebrew/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
 
@@ -12126,6 +12759,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/variant/variant_fwd.hpp:
 
+/opt/homebrew/include/boost/container/detail/advanced_insert_int.hpp:
+
 /opt/homebrew/include/boost/mpl/aux_/clear_impl.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/list.hpp:
@@ -12149,6 +12784,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/config/platform/macos.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/complex:
+
+/opt/homebrew/include/boost/smart_ptr/detail/operator_bool.hpp:
 
 /opt/homebrew/include/boost/mpl/iter_fold.hpp:
 
@@ -12462,6 +13099,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/type_traits/has_plus.hpp:
 
+/opt/homebrew/include/boost/container/detail/mpl.hpp:
+
 /opt/homebrew/include/boost/type_traits.hpp:
 
 /opt/homebrew/include/boost/next_prior.hpp:
@@ -12618,6 +13257,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/range/mutable_iterator.hpp:
 
+/opt/homebrew/include/boost/container/new_allocator.hpp:
+
 /opt/homebrew/include/boost/mpl/aux_/insert_range_impl.hpp:
 
 /opt/homebrew/include/boost/range/detail/extract_optional_type.hpp:
@@ -12645,6 +13286,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/mpl/aux_/config/bcc.hpp:
 
 /opt/homebrew/include/CGAL/GMPXX_arithmetic_kernel.h:
+
+/opt/homebrew/include/boost/smart_ptr/shared_ptr.hpp:
 
 /opt/homebrew/include/boost/mpl/void.hpp:
 
@@ -12723,6 +13366,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/core/addressof.hpp:
 
 /opt/homebrew/include/boost/iterator/detail/enable_if.hpp:
+
+/opt/homebrew/include/boost/move/iterator.hpp:
 
 /opt/homebrew/include/boost/detail/select_type.hpp:
 
@@ -12838,6 +13483,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
+/opt/homebrew/include/CGAL/Spatial_searching/internal/Search_helpers.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
 
 /opt/homebrew/include/boost/type_traits/remove_reference.hpp:
@@ -12908,6 +13555,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/preprocessor/control/detail/while.hpp:
 
+/opt/homebrew/include/boost/intrusive/detail/config_begin.hpp:
+
 /opt/homebrew/include/boost/mpl/list/aux_/include_preprocessed.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/detail/fold_right.hpp:
@@ -12923,6 +13572,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/type_traits/is_enum.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/config/ttp.hpp:
+
+/opt/homebrew/include/boost/smart_ptr/bad_weak_ptr.hpp:
 
 /opt/homebrew/include/boost/iterator/detail/config_undef.hpp:
 
@@ -13083,6 +13734,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/none_t.hpp:
 
 /opt/homebrew/include/boost/iterator/iterator_traits.hpp:
+
+/opt/homebrew/include/boost/container/detail/construct_in_place.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp:
 
@@ -13432,6 +14085,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/nth_element.h:
 
+/opt/homebrew/include/boost/container/detail/config_begin.hpp:
+
 /opt/homebrew/include/boost/mpl/vector/aux_/empty.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/next_permutation.h:
@@ -13450,6 +14105,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/minmax.h:
 
+/opt/homebrew/include/CGAL/Kd_tree_rectangle.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/merge.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/max.h:
@@ -13465,6 +14122,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/is_sorted.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
+
+/opt/homebrew/include/boost/container/detail/placement_new.hpp:
 
 /opt/homebrew/include/boost/preprocessor/list/detail/fold_left.hpp:
 
@@ -13484,7 +14143,11 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
+/opt/homebrew/include/boost/smart_ptr/detail/sp_noexcept.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
+
+/opt/homebrew/include/CGAL/Has_member.h:
 
 /opt/homebrew/include/CGAL/assertions_behaviour.h:
 
@@ -13503,6 +14166,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/preprocessor/variadic/limits/elem_64.hpp:
 
 /opt/homebrew/include/boost/preprocessor/logical/bitor.hpp:
+
+/opt/homebrew/include/boost/intrusive/detail/mpl.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/fill.h:
 
@@ -13604,6 +14269,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/Get_arithmetic_kernel.h:
 
+/opt/homebrew/include/boost/intrusive/pack_options.hpp:
+
 /opt/homebrew/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp:
 
 /opt/homebrew/include/boost/tuple/detail/tuple_basic.hpp:
@@ -13629,6 +14296,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_uid_t.h:
 
 /opt/homebrew/include/CGAL/Cartesian/basic_constructions_2.h:
+
+/opt/homebrew/include/boost/move/detail/iterator_traits.hpp:
 
 /opt/homebrew/include/boost/mpl/push_back.hpp:
 
@@ -13856,6 +14525,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/uses_allocator.h:
 
+/opt/homebrew/include/boost/container/detail/variadic_templates_tools.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/machine/limits.h:
 
 /opt/homebrew/include/boost/type_traits/promote.hpp:
@@ -13926,6 +14597,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/Availability.h:
 
+/opt/homebrew/include/boost/intrusive/detail/std_fwd.hpp:
+
 /opt/homebrew/include/CGAL/Aff_transformation_2.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_seek_set.h:
@@ -13982,6 +14655,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/predef/library/std/stlport.h:
 
+/opt/homebrew/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/_wctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/concepts.h:
@@ -14035,6 +14710,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/algorithm:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/unistd.h:
+
+/opt/homebrew/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp:
 
 /opt/homebrew/include/CGAL/Sqrt_extension/Sqrt_extension_type.h:
 
@@ -14352,6 +15029,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/mpl/list/aux_/tag.hpp:
 
+/opt/homebrew/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/insert_iterator.h:
 
 /opt/homebrew/include/boost/random/laplace_distribution.hpp:
@@ -14478,6 +15157,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/predef/library/std/vacpp.h:
 
+/opt/homebrew/include/CGAL/Has_timestamp.h:
+
 /opt/homebrew/include/CGAL/Intersections_2/Point_2_Segment_2.h:
 
 /opt/homebrew/include/boost/predef/compiler/gcc.h:
@@ -14492,7 +15173,11 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/boost/mpl/aux_/config/static_constant.hpp:
 
+/opt/homebrew/include/boost/move/detail/pointer_element.hpp:
+
 /opt/homebrew/include/boost/predef/compiler/iar.h:
+
+/opt/homebrew/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
 
 /opt/homebrew/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h:
 
@@ -14537,6 +15222,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
 
 /opt/homebrew/include/CGAL/export/helpers.h:
+
+/opt/homebrew/include/CGAL/Time_stamper.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/_types/_uint8_t.h:
 
@@ -14631,6 +15318,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /opt/homebrew/include/boost/multiprecision/detail/et_ops.hpp:
 
 /opt/homebrew/include/boost/mpl/aux_/largest_int.hpp:
+
+/opt/homebrew/include/boost/iterator/counting_iterator.hpp:
 
 /opt/homebrew/include/CGAL/Homogeneous/predicates_on_pointsH3.h:
 
@@ -14736,6 +15425,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 
 /opt/homebrew/include/CGAL/predicates/sign_of_determinant.h:
 
+/opt/homebrew/include/CGAL/Splitters.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
 /opt/homebrew/include/boost/predef/architecture/parisc.h:
@@ -14803,6 +15494,8 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: /Users/angeloskorakitis/Documents/Uni
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/bitset:
 
 /opt/homebrew/include/boost/config.hpp:
+
+/opt/homebrew/include/boost/container/deque.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/typeinfo:
 

@@ -85,7 +85,6 @@ int main(int argc, char *argv[])
 
   srand(time(NULL));
 
-
   Polygon polygon_initial;
 
 
@@ -108,7 +107,7 @@ int main(int argc, char *argv[])
   }
   else if(algorithm_initial == "convex_hull") {
     //
-    // Pedio doksis lampron!
+    polygon_initial = convex_hull_algorithm(points, 1);
     //
   }
   else {
@@ -121,7 +120,7 @@ int main(int argc, char *argv[])
 
   // Calling the algorihm function.
   if(algorithm == "local_search") {
-    polygon = local_search(polygon_initial, threshold, L);
+    polygon = local_search(polygon_initial, threshold, L, optimization);
   }
   else if(algorithm == "simulated_annealing") {
     //

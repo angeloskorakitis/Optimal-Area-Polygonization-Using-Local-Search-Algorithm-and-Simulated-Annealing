@@ -5,8 +5,6 @@
 //
 //
 /////////////////////////////////////////////////////////////////////////////////
-
-
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/convex_hull_2.h>
 #include <CGAL/Polygon_2.h>
@@ -17,8 +15,15 @@
 #include <string>
 #include <chrono>
 #include <ctime>
+#include <cmath>
 #include <fstream>
 #include <sstream>
+
+// New includes
+#include <CGAL/Simple_cartesian.h>
+#include <CGAL/Search_traits_2.h>
+#include <CGAL/Orthogonal_k_neighbor_search.h>
+#include <CGAL/Fuzzy_iso_box.h>
 
 // Some typedefs for readability
 
@@ -34,11 +39,18 @@ typedef Polygon::Edge_const_circulator                        EdgeCirculator;
 typedef Polygon::Edge_const_iterator                          EdgeIterator;
 typedef std::vector<Point>                                    PointVector;
 typedef std::vector<Segment>                                  SegmentVector;
-typedef std::vector<VertexCirculator>                         VertexCirculatorVector;
-typedef VertexCirculatorVector::iterator                      pVertexCirculatorVector;
 typedef PointVector::iterator                                 pPointVector;
 typedef SegmentVector::iterator                               pSegmentVector;
 typedef std::string                                           String;    
+
+// New typedefs
+typedef std::vector<VertexCirculator>                         VertexCirculatorVector;
+typedef VertexCirculatorVector::iterator                      pVertexCirculatorVector;
+typedef CGAL::Search_traits_2<K> SearchTraits;
+typedef CGAL::Orthogonal_k_neighbor_search<SearchTraits> Neighbor_search;
+typedef Neighbor_search::Tree Tree;
+typedef CGAL::Fuzzy_iso_box<SearchTraits> Box;
+
 
 //______________________________Input/Output functions___________________________________
 
