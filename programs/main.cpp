@@ -4,7 +4,8 @@
 #include <ctime>
 
 #pragma one;
-enum { MINIMALIZATION = 1, MAXIMALIZATION = 0 };
+enum { MINIMALIZATION = true, MAXIMALIZATION = false };
+enum { GLOBAL = false, LOCAL = true };
 
 
 bool comparePoints(Point a, Point b) {
@@ -301,8 +302,8 @@ bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(
     point_t--;
   }
 
-  if(point_s == -1) point_s = new_polygon.size();
-  if(point_t == -1) point_t = new_polygon.size();
+  if(point_s == -1) point_s = new_polygon.size() - 1;
+  if(point_t == -1) point_t = new_polygon.size() - 1;
 
 
   // std::cout << "Προσθέτω το Q = " << Q << " πριν το σημείο T = " << T << " point t = " << point_t << std::endl;
@@ -412,142 +413,112 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 }
 
+Polygon simulated_annealing(Polygon polygon, PointVector points, bool goal, bool step);
+
+
+bool check_rightmost(PointVector* spal) {
+  std::cout << "Rightmost check." << std::endl;
+  Polygon convex_hull;
+  CGAL::convex_hull_2(spal->begin(), spal->end(), std::back_inserter(convex_hull));
+
+  Polygon::Vertex_const_iterator rightpoint = convex_hull.right_vertex();
+  Point point = *rightpoint; 
+  int index = position_of_point_in_polygon(convex_hull, point);
+
+  Segment edge;
+  if(index != 0) 
+    edge = convex_hull.edge(index - 1);
+  else
+    edge = convex_hull.edge(convex_hull.size() - 1);
+  
+  std::cout << "EDGE = " << edge << std::endl;
+  
+  // If the other endpoint of the edge is "higher" than the point, the check fails.
+  if((edge.source().y() > point.y()) || edge.target().y() > point.y()) return false;
+
+  return true;
+}
+
+bool check_leftmost(PointVector* spal) {
+  std::cout << "Leftmost check." << std::endl;
+  Polygon convex_hull;
+  CGAL::convex_hull_2(spal->begin(), spal->end(), std::back_inserter(convex_hull));
+
+  Polygon::Vertex_const_iterator leftpoint = convex_hull.left_vertex();
+  Point point = *leftpoint; 
+  int index = position_of_point_in_polygon(convex_hull, point);
+
+
+  Segment edge = convex_hull.edge(index);
+  
+  std::cout << "EDGE = " << edge << std::endl;
+
+  // If the other endpoint of the edge is "higher" than the point, the check fails.
+  if((edge.source().y() > point.y()) || edge.target().y() > point.y()) return false;
+
+  return true;
+}
+
+// Fills spal with points till the critirea are met. 
+int fill_spal(PointVector* spal, PointVector points, int starting_index, int m) {
+  bool last_spal = false;
+  int i;
+  for(i = starting_index; i < starting_index + m; i++) {
+    if(i == points.size()) {
+      last_spal = true;
+      break;
+    }
+
+    spal->push_back(points[i]);
+  }
+
+  // If few points are left, include them too.
+  if((points.size() - i) <= (m/2)) {
+    last_spal = true;
+    while(i < points.size()) {
+      spal->push_back(points[i++]);
+    }
+  }
+
+  // Flags to check 
+  bool rightmost = false;
+  bool leftmost = false;
+
+
+  print_point_vector(*spal);
+
+  rightmost = check_rightmost(spal);
+  if(starting_index != 0) 
+    leftmost = check_leftmost(spal);
+
+  if(starting_index == 0) leftmost = true;
+  if(last_spal) { // Τι γίνεται αν το κοινό σημείο του τελευταίου είναι το χαμηλότερο όλων, οέο...;
+    rightmost = true;
+    leftmost = true;
+  }
+
+  while((!rightmost) || (!leftmost)) {
+    std::cout << "Θα δούμε." << std::endl;
+
+    spal->push_back(points[i++]);
+    
+    if(starting_index != 0) 
+      leftmost = check_leftmost(spal);
+
+    rightmost = check_rightmost(spal);
+
+
+    if(i == points.size()) break;
+
+  }
+
+  std::cout << std::endl;
+  return i;
+}
+
 
 
 int main(int argc, char *argv[]) {
-
-
-// Tree tree;
-
-// tree.insert(Point(0,0));
-// tree.insert(Point(10,10));
-// tree.insert(Point(0,10));
-// tree.insert(Point(10,0));
-// tree.insert(Point(3,3));
-// tree.insert(Point(5,6));
-// tree.insert(Point(8,9));
-// tree.insert(Point(9,2));
-
-// tree.insert(Point(-10,0));
-// tree.insert(Point(1,17));
-// tree.insert(Point(12,15));
-// tree.insert(Point(3,3));
-// tree.insert(Point(3,-2));
-// tree.insert(Point(5,-6));
-// tree.insert(Point(-8,-9));
-// tree.insert(Point(9,1));
-
-// // tree.print();
-
-//   // Initialize the search structure, and search all N points
-//   Point query(5,5);
-//   Neighbor_search search(tree, query, 4);
-//    // report the N nearest neighbors and their distance
-//   // This should sort all N points by increasing distance from origin
-//   for(Neighbor_search::iterator it = search.begin(); it != search.end(); ++it)
-//     std::cout << it->first << " "<< std::sqrt(it->second) << std::endl;
-
-
-//   Point A(0, 0);
-//   Point B(10, 10);
-
-//   Box my_box(A, B);
-
-//   if(my_box.contains(Point(3,7))) {
-//     std::cout << "Box Contains 3 7!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 3 7!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(13,2))) {
-//     std::cout << "Box Contains 13 2!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 13 2!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(3,12))) {
-//     std::cout << "Box Contains 3 12!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 3 12!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(-1, 5))) {
-//     std::cout << "Box Contains -1 5!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain -1 5!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(0, 5))) {
-//     std::cout << "Box Contains 0 5!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 0 5!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(10, 10))) {
-//     std::cout << "Box Contains 10 10!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 10 10!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(10, 1))) {
-//     std::cout << "Box Contains 10 1!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 10 1!" << std::endl;
-//   }
-
-//   if(my_box.contains(Point(7, -1))) {
-//     std::cout << "Box Contains 7 -1!" << std::endl;
-//   }
-//   else {
-//     std::cout << "Box DOES NOT contain 7 -1!" << std::endl;
-//   }
-
-
-//   std::filebuf fb;
-//   fb.open("mypointstempfile.txt", std::ios::out);
-//   std::ostream os(&fb);
-
-//   tree.search(std::ostream_iterator<Point>(os, "\n"), my_box);
-//   PointVector in_the_box_points;
-//   fb.close();
-
-//   std::ifstream is("mypointstempfile.txt");
-//   int x, y;
-//   while(is >> x >> y) {
-//     in_the_box_points.push_back(Point(x,y));
-//   }
-
-//   if(remove("mypointstempfile.txt") != 0)
-//     perror("Error deleting file");
-
-
-//   print_point_vector(in_the_box_points);
-
-
-// exit(EXIT_SUCCESS);
-
-
-// Polygon teeest;
-// teeest.push_back(Point(0, 0));
-// // teeest.push_back(Point(5, 5));
-// teeest.push_back(Point(10, 10));
-// teeest.push_back(Point(7, 7));
-// teeest.push_back(Point(0, 10));
-
-// print_polygon(teeest);
-
-// std::cout << "Η στιγμή της αλήθειας... is simple...? " << teeest.is_simple() << std::endl;
-
-
-// exit(EXIT_SUCCESS);
-
 
 
   // Input parameters.
@@ -627,8 +598,8 @@ std::cout << "Sorting..." << std::endl;
 print_point_vector(testvec);
 
 
-int m = 4;
-int k = ceil((testvec.size() - 1) / (m - 1));
+int m = 20;
+int k = ceil((double) (testvec.size() - 1) / (double) (m - 1));
 
 
 std::cout << "K = " << k << std::endl;
@@ -637,19 +608,23 @@ std::vector<PointVector*> sets;
 
 
 // Split points to k vectors of m points. 
-bool next_set = true;
+bool next_set = false;
 PointVector* set;
-for(int i = 0; i < testvec.size(); i++) {
-  if(next_set) {
-    set = new PointVector();
-    sets.push_back(set);
-    next_set = false;
-  }
 
-  set->push_back(testvec[i]);
-  if(set->size() == m) next_set = true;
-
+bool keep_going = true;
+int i = 0;
+while(keep_going) {
+  set = new PointVector();
+  sets.push_back(set);
+  i = fill_spal(set, testvec, i, m);
+  if(i >= testvec.size()) keep_going = false;
+  i--;
 }
+
+
+
+
+
 
 
 // Sets has k points to vectors of m points each.
@@ -659,10 +634,25 @@ for(int i = 0; i < sets.size(); i++) {
   print_point_vector(*sets[i]);
 }
 
+return EXIT_SUCCESS;
 
 // 1.
 // Check all that need to be checked.
 // "Pin down" rightmost and leftmost edge. 
+std::vector<Polygon> hulls;
+for(int i = 0; i < sets.size(); i++) {
+  // CH για κάθε set. 
+  Polygon convex_hull;
+  CGAL::convex_hull_2(sets[i]->begin(), sets[i]->end(), std::back_inserter(convex_hull));
+  hulls.push_back(convex_hull);
+}
+
+  std::cout << "Hulls." << std::endl;
+for(int i = 0; i < hulls.size(); i++) {
+  print_polygon(hulls[i]);
+  std::cout << std::endl;
+  std::cout << std::endl;
+}
 
 // 2.
 // Apply Simulated Annealing with global step for each set. 
@@ -779,97 +769,11 @@ print_polygon(polygon);
 
 
 
-
-
-
-Tree tree;
-
-for(int i = 0; i < points.size(); i++)
-  tree.insert(points[i]);
-
-Polygon old_polygon;
-int L = 5000;
-double Temperature = 1.0;
-int goal = MINIMALIZATION;
-// int goal = MAXIMALIZATION;
-
-
-// Keep convex hull to check "energy".
-Polygon convex_hull;
-CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
-double ch_area = CGAL::abs(convex_hull.area());
-
-double energy = compute_energy(polygon, ch_area, goal);
-
-// std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
-
-
-
-while(Temperature > 0) {
-
-  // Try global step till a valid step is made.
-  old_polygon = polygon;
-  // while(!local_step(&polygon, &tree));
-  while(!global_step(&polygon));
-  // std::cout << std::endl;
-  // print_polygon(polygon);
-
-  double new_polygon_area = CGAL::abs(polygon.area());
-
-  double new_energy = compute_energy(polygon, ch_area, goal);
-  // double new_energy2 = compute_energy(polygon, ch_area, false);
-
-  double difference = new_energy - energy;
-
-  // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
-  // std::cout << "Difference = " << difference << std::endl;
-
-  if((difference < 0) || (metropolis(difference, Temperature))) {
-    // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
-    // The change passes. The polygon is updated.
-    energy = new_energy;
-  }
-  else {
-    // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
-    // The change is rejected. The polygon is not updated.
-    polygon = old_polygon;
-  }
-
-
-  // double aykala = 1.0 / (double) L;
-  // std::cout << "OJPA! aykala = " << aykala << std::endl; 
-  // // Temperature = (double) (Temperature - (double) (1 / L));
-  // Temperature = (double) (Temperature - aykala);
-
-
-  Temperature -= (1.0 / (double) L);
-  // std::cout << "Temperature = " << Temperature << std::endl;
-
-
-}
-
-
-
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-
-    print_polygon(polygon);
-std::cout << "Convex Hull Area = " << ch_area << std::endl;
-std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
-std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
-
-
-
-  std::filebuf fb;
-  fb.open("mylog", std::ios::out);
-  std::ostream os(&fb);
-  for(int i = 0; i < polygon.size(); i++) {
-    Point point = *(polygon.begin() + i);
-    os << point << std::endl;
-  }
-  fb.close();
-
+// Polygon letsgo = simulated_annealing(polygon, points, MAXIMALIZATION, LOCAL);
+// Polygon letsgo = simulated_annealing(polygon, points, MAXIMALIZATION, GLOBAL);
+// Polygon letsgo = simulated_annealing(polygon, points, MINIMALIZATION, LOCAL);
+Polygon letsgo = simulated_annealing(polygon, points, MINIMALIZATION, GLOBAL);
+print_polygon(letsgo);
 
 // std::cout << std::endl;
 // if(local_step(&polygon, &tree)) {
@@ -885,25 +789,6 @@ std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::end
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return EXIT_SUCCESS;
 }
 
@@ -913,4 +798,90 @@ std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::end
 
 
 
+Polygon simulated_annealing(Polygon polygon, PointVector points, bool goal = MINIMALIZATION, bool step = GLOBAL) {
 
+  Tree tree;
+
+  for(int i = 0; i < points.size(); i++)
+    tree.insert(points[i]);
+
+  Polygon old_polygon;
+  int L = 5000;
+  double Temperature = 1.0;
+  // int goal = MINIMALIZATION;
+  // int goal = MAXIMALIZATION;
+
+
+  // Keep convex hull to check "energy".
+  Polygon convex_hull;
+  CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
+  double ch_area = CGAL::abs(convex_hull.area());
+
+  double energy = compute_energy(polygon, ch_area, goal);
+
+  // std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
+
+
+
+  while(Temperature > 0) {
+
+    // Try global step till a valid step is made.
+    old_polygon = polygon;
+
+    if(step == LOCAL)
+      while(!local_step(&polygon, &tree));
+    else if(step == GLOBAL)
+      while(!global_step(&polygon));
+    // std::cout << std::endl;
+    // print_polygon(polygon);
+
+    double new_polygon_area = CGAL::abs(polygon.area());
+
+    double new_energy = compute_energy(polygon, ch_area, goal);
+    // double new_energy2 = compute_energy(polygon, ch_area, false);
+
+    double difference = new_energy - energy;
+
+    // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
+    // std::cout << "Difference = " << difference << std::endl;
+
+    if((difference < 0) || (metropolis(difference, Temperature))) {
+      // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
+      // The change passes. The polygon is updated.
+      energy = new_energy;
+    }
+    else {
+      // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
+      // The change is rejected. The polygon is not updated.
+      polygon = old_polygon;
+    }
+
+
+    // double aykala = 1.0 / (double) L;
+    // std::cout << "OJPA! aykala = " << aykala << std::endl; 
+    // // Temperature = (double) (Temperature - (double) (1 / L));
+    // Temperature = (double) (Temperature - aykala);
+
+
+    Temperature -= (1.0 / (double) L);
+    // std::cout << "Temperature = " << Temperature << std::endl;
+
+
+  }
+
+
+
+
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+      // print_polygon(polygon);
+  std::cout << "Convex Hull Area = " << ch_area << std::endl;
+  std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
+  std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+
+  return polygon;
+}
