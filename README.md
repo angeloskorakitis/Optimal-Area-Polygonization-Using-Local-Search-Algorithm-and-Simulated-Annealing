@@ -151,7 +151,27 @@ ratio_initial: 0.760347
 ratio: 0.760546
 construction time: 30.454
 
+./optimal_polygon -i ../instances/data/images/us-night-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 6 -max -threshold 0.001 
+
+Algorithm: incremental_local_search_max
+area_initial: 83075854
+area: 91975332
+ratio_initial: 0.78412
+ratio: 0.868119
+construction time: 139.239
+
+./optimal_polygon -i ../instances/data/images/us-night-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 6 -max -threshold 0.01 
+
+Algorithm: incremental_local_search_max
+area_initial: 83075854
+area: 86521198
+ratio_initial: 0.78412
+ratio: 0.816639
+construction time: 14.14
+
 Γενικα παρατηρούμε ότι για μεγάλα σύνολα 1000+ σημεία χρειάζονται πολλοί πόροι για να τρέξουμε τον αλγόριθμο με μικρό threshold, μικρότερο από 0.001 και επομένως να έχουμε σημαντικές αλλαγές στην
 βελτιστοποίηση του εμβαδού.
+
+Εξαρτάται αρκετα και από την γεωμετρία του ίδιου του προβλήματος και το πόσες αλλαγές θα βρει η ευριστική. Για παραδειγμα τρέχοντας δυο διαφορετικά σημειοσύνολα με 200 σημεία και ίδιες παραμέτρους παρατηρούμε μεγάλη διαφορα στα αποτελέσματα...(να πω περισσοτερα)
 
 Καλή Διόρθωση! :D

@@ -6,9 +6,14 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
+
 #include "Utilities.hpp"
 
-bool compare_delta(double temp_delta,double delta, String optimization);
+
+// Compares temp_delta and delta given the optimization, min or max, and returns a boolean value.
+// eg. if optimization is max then if temp_delta > delta return true otherwise false.
+
+bool compare_delta(double temp_delta, double delta, String optimization);
 
 // Returns a polygon after the local search given the threshold and L, the maximum number of paths we are going to search.
 

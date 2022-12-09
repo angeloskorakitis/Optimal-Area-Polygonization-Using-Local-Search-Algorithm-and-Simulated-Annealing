@@ -1,17 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 //
-// Implementation of Polygonization Using the Incremental Algorithm 
+// Simulated Annealing for Area-Optimal Polygonization
 //
 //
 /////////////////////////////////////////////////////////////////////////////////
 
 
 #include "Simulated_Annealing_Area-Optimal_Polygonization.hpp"
-
-
 #pragma one;
-enum { MINIMALIZATION = 1, MAXIMALIZATION = 0 };
 
 
 bool comparePoints(Point a, Point b) {
@@ -308,8 +305,86 @@ bool global_step(Polygon* polygon, Point Q = Point(-1,-1), Segment ST = Segment(
     point_t--;
   }
 
-  if(point_s == -1) point_s = new_polygon.size();
-  if(point_t == -1) point_t = new_polygon.size();
+  if(point_s == -1) point_s = new_polygon.size() - 1;
+  if(point_t == -1) point_t = new_polygon.size() - 1;
+
+
+  // std::cout << "Προσθέτω το Q = " << Q << " πριν το σημείο T = " << T << " point t = " << point_t << std::endl;
+  new_polygon.insert(new_polygon.begin() + point_t, Q);
+
+
+  if(new_polygon.is_simple()) {
+    *polygon = new_polygon;
+    // std::cout << "Valid!" << std::endl;
+    return true;
+  }
+  else {
+    // std::cout << "Reject..." << std::endl;
+    return false;
+  }
+
+}
+
+
+// Performs and checks validity of global step. 
+// Returns true if the step is valid and the polygon is changed.
+// Returns false if the step is invalid and the polygon stays the same.
+bool spatial_global_step(Polygon* polygon) {
+
+  Point Q;
+  Polygon new_polygon = *polygon;
+  
+  
+  Point rightmost_point = *(new_polygon.right_vertex());
+  Point leftmost_point = *(new_polygon.left_vertex());
+  int right_index = position_of_point_in_polygon(new_polygon, rightmost_point);
+  int left_index = position_of_point_in_polygon(new_polygon, leftmost_point);
+
+  int next_of_left = left_index + 1;
+  if(left_index == new_polygon.size() - 1) next_of_left = 0;
+  int previous_of_right = right_index - 1;
+  if(right_index == 0) previous_of_right = new_polygon.size() - 1;
+
+
+  int point_q;
+  do {
+    point_q = rand() % (*polygon).size();
+  // Making sure we don't change position of the rightmost or leftmost edge.
+  } while((point_q == right_index) || (point_q == left_index) || (point_q == next_of_left) || (point_q == previous_of_right));
+
+  int point_s;
+  do {
+    point_s = rand() % (*polygon).size();
+  // Make sure Q != S and Q != T.
+  // Also making sure we don't change position of the rightmost or leftmost edge.
+  } while((point_s == left_index) || (point_s == previous_of_right) || (point_s == point_q) || ((point_s + 1) == point_q) || ((point_s == ((*polygon).size() - 1)) && (point_q == 0)));
+
+
+  if(point_s == -1) return false;
+
+  int point_t = point_s + 1;
+  if(point_s == new_polygon.size() - 1)
+    point_t = 0;
+
+
+  Q = *((*polygon).begin() + point_q);
+  Point S = *((*polygon).begin() + point_s);
+  Point T = *((*polygon).begin() + point_t);
+
+
+  // std::cout << "\tQ = " << Q << " S = " << S << " T = " << T << std::endl;
+
+  // std::cout << "Διαγράφω το " << *(new_polygon.begin() + point_q) << std::endl;
+  new_polygon.erase(new_polygon.begin() + point_q);
+  // print_polygon(new_polygon);
+
+  if(point_q < point_s) {
+    point_s--;
+    point_t--;
+  }
+
+  if(point_s == -1) point_s = new_polygon.size() - 1;
+  if(point_t == -1) point_t = new_polygon.size() - 1;
 
 
   // std::cout << "Προσθέτω το Q = " << Q << " πριν το σημείο T = " << T << " point t = " << point_t << std::endl;
@@ -420,8 +495,280 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 }
 
 
+bool check_rightmost(PointVector* spal) {
+  std::cout << "Rightmost check." << std::endl;
+  Polygon convex_hull;
+  CGAL::convex_hull_2(spal->begin(), spal->end(), std::back_inserter(convex_hull));
+
+  Polygon::Vertex_const_iterator rightpoint = convex_hull.right_vertex();
+  Point point = *rightpoint; 
+  int index = position_of_point_in_polygon(convex_hull, point);
+
+  Segment edge;
+  if(index != 0) 
+    edge = convex_hull.edge(index - 1);
+  else
+    edge = convex_hull.edge(convex_hull.size() - 1);
+  
+  std::cout << "EDGE = " << edge << std::endl;
+  
+  // If the other endpoint of the edge is "higher" than the point, the check fails.
+  if((edge.source().y() > point.y()) || edge.target().y() > point.y()) return false;
+
+  return true;
+}
+
+
+bool check_leftmost(PointVector* spal) {
+  std::cout << "Leftmost check." << std::endl;
+  Polygon convex_hull;
+  CGAL::convex_hull_2(spal->begin(), spal->end(), std::back_inserter(convex_hull));
+
+  Polygon::Vertex_const_iterator leftpoint = convex_hull.left_vertex();
+  Point point = *leftpoint; 
+  int index = position_of_point_in_polygon(convex_hull, point);
+
+
+  Segment edge = convex_hull.edge(index);
+  
+  std::cout << "EDGE = " << edge << std::endl;
+
+  // If the other endpoint of the edge is "higher" than the point, the check fails.
+  if((edge.source().y() > point.y()) || edge.target().y() > point.y()) return false;
+
+  return true;
+}
+
+
+// Fills spal with points till the critirea are met. 
+int fill_spal(PointVector* spal, PointVector points, int starting_index, int m) {
+  bool last_spal = false;
+  int i;
+  for(i = starting_index; i < starting_index + m; i++) {
+    if(i == points.size()) {
+      last_spal = true;
+      break;
+    }
+
+    spal->push_back(points[i]);
+  }
+
+  // If few points are left, include them too.
+  if((points.size() - i) <= (m/2)) {
+    last_spal = true;
+    while(i < points.size()) {
+      spal->push_back(points[i++]);
+    }
+  }
+
+  // Flags to check 
+  bool rightmost = false;
+  bool leftmost = false;
+
+
+  print_point_vector(*spal);
+
+  rightmost = check_rightmost(spal);
+  if(starting_index != 0) 
+    leftmost = check_leftmost(spal);
+
+  if(starting_index == 0) leftmost = true;
+  if(last_spal) { // Τι γίνεται αν το κοινό σημείο του τελευταίου είναι το χαμηλότερο όλων, οέο...;
+    rightmost = true;
+    leftmost = true;
+  }
+
+  while((!rightmost) || (!leftmost)) {
+    std::cout << "Θα δούμε." << std::endl;
+
+    spal->push_back(points[i++]);
+    
+    if(starting_index != 0) 
+      leftmost = check_leftmost(spal);
+
+    rightmost = check_rightmost(spal);
+
+
+    if(i == points.size()) break;
+
+  }
+
+  std::cout << std::endl;
+  return i;
+}
+
+
+
+Polygon simulated_annealing(Polygon polygon, PointVector points, bool goal = MINIMALIZATION, bool step = GLOBAL) {
+
+  Tree tree;
+
+  for(int i = 0; i < points.size(); i++)
+    tree.insert(points[i]);
+
+  Polygon old_polygon;
+  int L = 5000;
+  double Temperature = 1.0;
+  // int goal = MINIMALIZATION;
+  // int goal = MAXIMALIZATION;
+
+
+  // Keep convex hull to check "energy".
+  Polygon convex_hull;
+  CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
+  double ch_area = CGAL::abs(convex_hull.area());
+
+  double energy = compute_energy(polygon, ch_area, goal);
+
+  // std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
+
+
+
+  while(Temperature > 0) {
+
+    // Try global step till a valid step is made.
+    old_polygon = polygon;
+
+    if(step == LOCAL)
+      while(!local_step(&polygon, &tree));
+    else if(step == GLOBAL)
+      while(!global_step(&polygon));
+    // std::cout << std::endl;
+    // print_polygon(polygon);
+
+    double new_polygon_area = CGAL::abs(polygon.area());
+
+    double new_energy = compute_energy(polygon, ch_area, goal);
+    // double new_energy2 = compute_energy(polygon, ch_area, false);
+
+    double difference = new_energy - energy;
+
+    // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
+    // std::cout << "Difference = " << difference << std::endl;
+
+    if((difference < 0) || (metropolis(difference, Temperature))) {
+      // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
+      // The change passes. The polygon is updated.
+      energy = new_energy;
+    }
+    else {
+      // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
+      // The change is rejected. The polygon is not updated.
+      polygon = old_polygon;
+    }
+
+
+    // double aykala = 1.0 / (double) L;
+    // std::cout << "OJPA! aykala = " << aykala << std::endl; 
+    // // Temperature = (double) (Temperature - (double) (1 / L));
+    // Temperature = (double) (Temperature - aykala);
+
+
+    Temperature -= (1.0 / (double) L);
+    // std::cout << "Temperature = " << Temperature << std::endl;
+
+
+  }
+
+
+
+
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+      // print_polygon(polygon);
+  std::cout << "Convex Hull Area = " << ch_area << std::endl;
+  std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
+  std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+
+  return polygon;
+}
+
+
+
+Polygon spatial_annealing(Polygon polygon, PointVector points, bool goal = MINIMALIZATION) {
+
+  Polygon old_polygon;
+  int L = 5000;
+  double Temperature = 1.0;
+
+  // Keep convex hull to check "energy".
+  Polygon convex_hull;
+  CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
+  double ch_area = CGAL::abs(convex_hull.area());
+
+  double energy = compute_energy(polygon, ch_area, goal);
+
+  // std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
+
+
+  while(Temperature > 0) {
+
+    // Try global step till a valid step is made.
+    old_polygon = polygon;
+
+    while(!spatial_global_step(&polygon));
+    // std::cout << std::endl;
+    // print_polygon(polygon);
+
+    double new_polygon_area = CGAL::abs(polygon.area());
+
+    double new_energy = compute_energy(polygon, ch_area, goal);
+    // double new_energy2 = compute_energy(polygon, ch_area, false);
+
+    double difference = new_energy - energy;
+
+    // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
+    // std::cout << "Difference = " << difference << std::endl;
+
+    if((difference < 0) || (metropolis(difference, Temperature))) {
+      // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
+      // The change passes. The polygon is updated.
+      energy = new_energy;
+    }
+    else {
+      // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
+      // The change is rejected. The polygon is not updated.
+      polygon = old_polygon;
+    }
+
+
+    // double aykala = 1.0 / (double) L;
+    // std::cout << "OJPA! aykala = " << aykala << std::endl; 
+    // // Temperature = (double) (Temperature - (double) (1 / L));
+    // Temperature = (double) (Temperature - aykala);
+
+
+    Temperature -= (1.0 / (double) L);
+    std::cout << "Temperature = " << Temperature << std::endl;
+
+
+  }
+
+
+
+
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+      // print_polygon(polygon);
+  std::cout << "Convex Hull Area = " << ch_area << std::endl;
+  std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
+  std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
+      std::cout << std::endl;
+      std::cout << std::endl;
+
+
+  return polygon;
+}
+
+
 
 // int main(int argc, char *argv[]) {
+
 
 //   // Input parameters.
 //   String error_msg = "Unable to run the program.\nUsage: ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο> \n";
@@ -501,7 +848,7 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 
 // int m = 4;
-// int k = ceil((testvec.size() - 1) / (m - 1));
+// int k = ceil((double) (testvec.size() - 1) / (double) (m - 1));
 
 
 // std::cout << "K = " << k << std::endl;
@@ -510,19 +857,23 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 
 // // Split points to k vectors of m points. 
-// bool next_set = true;
+// bool next_set = false;
 // PointVector* set;
-// for(int i = 0; i < testvec.size(); i++) {
-//   if(next_set) {
-//     set = new PointVector();
-//     sets.push_back(set);
-//     next_set = false;
-//   }
 
-//   set->push_back(testvec[i]);
-//   if(set->size() == m) next_set = true;
-
+// bool keep_going = true;
+// int i = 0;
+// while(keep_going) {
+//   set = new PointVector();
+//   sets.push_back(set);
+//   i = fill_spal(set, testvec, i, m);
+//   if(i >= testvec.size()) keep_going = false;
+//   i--;
 // }
+
+
+
+
+
 
 
 // // Sets has k points to vectors of m points each.
@@ -536,13 +887,45 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 // // 1.
 // // Check all that need to be checked.
 // // "Pin down" rightmost and leftmost edge. 
+// // std::vector<Polygon> hulls;
+// // for(int i = 0; i < sets.size(); i++) {
+// //   // CH για κάθε set. 
+// //   Polygon convex_hull;
+// //   CGAL::convex_hull_2(sets[i]->begin(), sets[i]->end(), std::back_inserter(convex_hull));
+// //   hulls.push_back(convex_hull);
+// // }
+
+// //   std::cout << "Hulls." << std::endl;
+// // for(int i = 0; i < hulls.size(); i++) {
+// //   print_polygon(hulls[i]);
+// //   std::cout << std::endl;
+// //   std::cout << std::endl;
+// // }
 
 // // 2.
 // // Apply Simulated Annealing with global step for each set. 
-// // for(int i = 0; i < sets.size(); i++) {
-// //   Polygon a_polygon = simulated_annealing(sets[i], ..., ..., ...);
-// // }
 
+// // Εδώ προστίθεντια οι επιλογές του αρχικού αλγόριθμου κλπ. Incremental κατά προτίμηση. 
+// bool goal = MINIMALIZATION;
+// std::vector<Polygon> results;
+// for(int i = 0; i < sets.size(); i++) {
+//   Polygon first_step = convex_hull_algorithm(*sets[i], edge_selection);
+//   std::cout << "Χμμμμμ.... " << std::endl;
+//   Polygon result = spatial_annealing(first_step, *sets[i], goal);
+//   std::cout << "Πφφφφ.... " << std::endl;
+//   results.push_back(result);
+// }
+
+
+// for(int i = 0; i < results.size(); i++) {
+//   std::cout << std::endl;
+//   std::cout << std::endl;
+//   print_polygon(results[i]);
+// }
+
+//   std::cout << std::endl;
+
+// return EXIT_SUCCESS;
 // // 3.
 // // Merge all polygons into one big polygon.
 
@@ -553,68 +936,6 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 
 // return EXIT_SUCCESS;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -652,97 +973,11 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 
 
-
-
-
-// Tree tree;
-
-// for(int i = 0; i < points.size(); i++)
-//   tree.insert(points[i]);
-
-// Polygon old_polygon;
-// int L = 5000;
-// double Temperature = 1.0;
-// int goal = MINIMALIZATION;
-// // int goal = MAXIMALIZATION;
-
-
-// // Keep convex hull to check "energy".
-// Polygon convex_hull;
-// CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull));
-// double ch_area = CGAL::abs(convex_hull.area());
-
-// double energy = compute_energy(polygon, ch_area, goal);
-
-// // std::cout << "Convex Hull Area = " << ch_area << " Min energy = " << energy << " Max energy = " << energy2 << std::endl;
-
-
-
-// while(Temperature > 0) {
-
-//   // Try global step till a valid step is made.
-//   old_polygon = polygon;
-//   // while(!local_step(&polygon, &tree));
-//   while(!global_step(&polygon));
-//   // std::cout << std::endl;
-//   // print_polygon(polygon);
-
-//   double new_polygon_area = CGAL::abs(polygon.area());
-
-//   double new_energy = compute_energy(polygon, ch_area, goal);
-//   // double new_energy2 = compute_energy(polygon, ch_area, false);
-
-//   double difference = new_energy - energy;
-
-//   // std::cout << "New polygon Area = " << new_polygon_area << " Min energy = " << new_energy << std::endl;
-//   // std::cout << "Difference = " << difference << std::endl;
-
-//   if((difference < 0) || (metropolis(difference, Temperature))) {
-//     // std::cout << "Όλα κομπλέ μπρω μου περνάς το vajb test." << std::endl;
-//     // The change passes. The polygon is updated.
-//     energy = new_energy;
-//   }
-//   else {
-//     // std::cout << "Δεν περνάς δεν περνάς." << std::endl;
-//     // The change is rejected. The polygon is not updated.
-//     polygon = old_polygon;
-//   }
-
-
-//   // double aykala = 1.0 / (double) L;
-//   // std::cout << "OJPA! aykala = " << aykala << std::endl; 
-//   // // Temperature = (double) (Temperature - (double) (1 / L));
-//   // Temperature = (double) (Temperature - aykala);
-
-
-//   Temperature -= (1.0 / (double) L);
-//   // std::cout << "Temperature = " << Temperature << std::endl;
-
-
-// }
-
-
-
-
-//     std::cout << std::endl;
-//     std::cout << std::endl;
-
-//     print_polygon(polygon);
-// std::cout << "Convex Hull Area = " << ch_area << std::endl;
-// std::cout << "Final Polygon Area = " << CGAL::abs(polygon.area()) << std::endl;
-// std::cout << "Ratio = " << (100*CGAL::abs(polygon.area())) / ch_area << std::endl;
-
-
-
-//   std::filebuf fb;
-//   fb.open("mylog", std::ios::out);
-//   std::ostream os(&fb);
-//   for(int i = 0; i < polygon.size(); i++) {
-//     Point point = *(polygon.begin() + i);
-//     os << point << std::endl;
-//   }
-//   fb.close();
-
+// // Polygon letsgo = simulated_annealing(polygon, points, MAXIMALIZATION, LOCAL);
+// // Polygon letsgo = simulated_annealing(polygon, points, MAXIMALIZATION, GLOBAL);
+// // Polygon letsgo = simulated_annealing(polygon, points, MINIMALIZATION, LOCAL);
+// Polygon letsgo = simulated_annealing(polygon, points, MINIMALIZATION, GLOBAL);
+// print_polygon(letsgo);
 
 // // std::cout << std::endl;
 // // if(local_step(&polygon, &tree)) {
@@ -758,24 +993,6 @@ bool local_step(Polygon* polygon, Tree* tree, Point Q = Point(-1,-1)) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //   return EXIT_SUCCESS;
 // }
+
