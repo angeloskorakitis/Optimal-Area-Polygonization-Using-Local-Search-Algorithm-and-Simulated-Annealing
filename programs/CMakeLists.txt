@@ -38,8 +38,9 @@ include_directories(BEFORE ../include)
 list(APPEND DEPENDS ../modules/Utilities.cpp 
                     ../modules/Polygonization_Using_Incremental_Algorithm.cpp 
                     ../modules/Polygonization_Using_Convex_Hull_Algorithm.cpp 
-                    ../modules/Local_Search_Area-Optimal_Polygonization.cpp
-                    # ../modules/Simulated_Annealing_Area-Optimal_Polygonization.cpp
+                    ../modules/Area-Optimal_Polygonization_Using_Local_Search.cpp
+                    ../modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp
+                    ../modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp
                     )
 
 add_executable( ${PROJECT_NAME} main.cpp ${DEPENDS})

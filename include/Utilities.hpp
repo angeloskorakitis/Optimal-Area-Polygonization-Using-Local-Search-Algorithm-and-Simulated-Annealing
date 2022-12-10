@@ -46,10 +46,12 @@ typedef std::string                                           String;
 // New typedefs
 typedef std::vector<VertexCirculator>                         VertexCirculatorVector;
 typedef VertexCirculatorVector::iterator                      pVertexCirculatorVector;
+
 typedef CGAL::Search_traits_2<K> SearchTraits;
 typedef CGAL::Orthogonal_k_neighbor_search<SearchTraits> Neighbor_search;
 typedef Neighbor_search::Tree Tree;
 typedef CGAL::Fuzzy_iso_box<SearchTraits> Box;
+
 
 
 //______________________________Input/Output functions___________________________________
@@ -91,3 +93,21 @@ void print_point_vector(PointVector points);
 // Prints a SegmentVector
 
 void print_segment_vector(SegmentVector segments);
+
+//______________________________________________________________________
+
+int position_of_point_in_polygon(Polygon polygon, Point point);
+
+int position_of_segment_in_polygon(Polygon polygon, Segment segment);
+
+// Compare Function for sorting point vectors.
+bool comparePoints(Point a, Point b);
+
+
+// Returns true if Metropolis criterion holds, false otherwise.
+bool metropolis(double difference, double temperature);
+
+
+// Computates the energy of the given polygon based on the convex hull area
+// and uses the correct formula depending on the state of "minimalization" flag (true/false).
+double compute_energy(Polygon polygon, double ch_area, bool minimalization);

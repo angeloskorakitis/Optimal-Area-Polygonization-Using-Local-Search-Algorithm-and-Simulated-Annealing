@@ -1,6 +1,6 @@
-CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o: \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
+CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.o: \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Area-Optimal_Polygonization_Using_Local_Search.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Utilities.hpp \
   /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /opt/homebrew/include/CGAL/Simple_cartesian.h \

@@ -1,6 +1,8 @@
 #include "Polygonization_Using_Incremental_Algorithm.hpp"
 #include "Polygonization_Using_Convex_Hull_Algorithm.hpp"
-#include "Local_Search_Area-Optimal_Polygonization.hpp"
+#include "Area-Optimal_Polygonization_Using_Simulated_Annealing.hpp"
+#include "Area-Optimal_Polygonization_Using_Local_Search.hpp"
+#include "Area-Optimal_Polygonization_Using_Spatial_Division.hpp"
 #include <iostream>
 #include <ctime>
 

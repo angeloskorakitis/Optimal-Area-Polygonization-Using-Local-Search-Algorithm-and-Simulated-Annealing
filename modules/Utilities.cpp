@@ -118,5 +118,82 @@ void print_output(Polygon polygon_initial,
     std::cerr << error_msg << std::endl;
   }  
 
-  
+}
+
+// Returns index of point in polygon.
+// Returns -1 if point doesn't exist in polygon.
+int position_of_point_in_polygon(Polygon polygon, Point point) {
+  int position = 0;
+  bool found = false;
+  for(VertexIterator i = polygon.begin(); i != polygon.end(); i++) {
+    if(point == *i) {
+      found = true;
+      break;
+    }
+    position++;
+  }
+
+  if(found) return position;
+  else return -1;
+}
+
+
+// Returns index of segment in polygon.
+// Returns -1 if point doesn't exist in polygon.
+int position_of_segment_in_polygon(Polygon polygon, Segment segment) {
+  int position = 0;
+  bool found = false;
+  for(EdgeIterator i = polygon.edges_begin(); i != polygon.edges_end(); i++) {
+    if((segment == *i) || (segment.opposite() == *i)) {
+      found = true;
+      break;
+    }
+    position++;
+  }
+
+  if(found) return position;
+  else return -1;
+
+}
+
+
+// Compare Function for sorting point vectors.
+bool comparePoints(Point a, Point b) {
+  if(a.x() < b.x()) return true;
+  else if(a.x() > b.x()) return false;
+  else {
+    if(a.y() < b.y()) return true;
+    else return false;
+  }
+}
+
+
+//////////////////// ENERGY ////////////////////
+
+
+// Returns true if Metropolis criterion holds, false otherwise.
+bool metropolis(double difference, double temperature) {
+
+  // Random number in [0,1].
+  double random_number = ( (double) rand() / (double) RAND_MAX);
+
+  double number = exp( -difference / temperature);
+  if(number >= random_number) return true;
+  else return false;
+}
+
+
+
+// Computates the energy of the given polygon based on the convex hull area
+// and uses the correct formula depending on the state of "minimalization" flag (true/false).
+double compute_energy(Polygon polygon, double ch_area, bool minimalization) {
+  if(minimalization) {
+  double div = CGAL::abs(polygon.area()) / ch_area;
+  return polygon.size() * div;
+  }
+  else {
+    double div = CGAL::abs(polygon.area()) / ch_area;
+    double sub = 1 - div;
+    return polygon.size() * sub;
+  }
 }

@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 //
-// Local Search for Area-Optimal Polygonization
+// Area-Optimal_Polygonization_Using_Local_Search
 //
 //
 /////////////////////////////////////////////////////////////////////////////////
@@ -22,11 +22,3 @@ Polygon local_search(Polygon polygon, double threshold, int L, String optimizati
 // Performs the path changes to the polygon. If the polygon is simple after the changes it returns it, else it returns the initial polygon.
 
 Polygon local_search_step(Polygon polygon, VertexCirculatorVector path, Segment segment);
-
-// Returns the position of a point in a polygon.
-
-int position_of_point_in_polygon(Polygon polygon, Point point);
-
-// Returns the position of the source point of a segment in a polygon.
-
-int position_of_segment_in_polygon(Polygon polygon, Segment segment);

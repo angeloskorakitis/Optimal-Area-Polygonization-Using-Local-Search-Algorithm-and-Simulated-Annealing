@@ -1,6 +1,6 @@
-CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o: \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
+CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.o: \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Area-Optimal_Polygonization_Using_Spatial_Division.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Utilities.hpp \
   /opt/homebrew/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
   /opt/homebrew/include/CGAL/Simple_cartesian.h \
@@ -2223,4 +2223,5 @@ CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/
   /opt/homebrew/include/boost/smart_ptr/detail/local_counted_base.hpp \
   /opt/homebrew/include/CGAL/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
-  /opt/homebrew/include/boost/detail/numeric_traits.hpp
+  /opt/homebrew/include/boost/detail/numeric_traits.hpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp

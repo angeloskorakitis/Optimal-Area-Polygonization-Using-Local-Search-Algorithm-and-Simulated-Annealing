@@ -129,29 +129,77 @@ optimal_polygon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/build
 .PHONY : optimal_polygon/fast
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.o
 
 # target to build an object file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.o
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.o
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.i
 
 # target to preprocess a source file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.i
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.i
 
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.s
 
 # target to generate assembly for a file
-Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
-.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.cpp.s
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.cpp.s
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.o
+
+# target to build an object file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.o
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.i
+
+# target to preprocess a source file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.i
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.s
+
+# target to generate assembly for a file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.cpp.s
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.o
+
+# target to build an object file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.o
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.o
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.i: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.i
+
+# target to preprocess a source file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.i
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.i
+
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.s: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.s
+
+# target to generate assembly for a file
+Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.s
+.PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.cpp.s
 
 Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o: Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.cpp.o
 .PHONY : Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o
@@ -258,9 +306,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... optimal_polygon"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.o"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.i"
-	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Local_Search_Area-Optimal_Polygonization.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Local_Search.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Simulated_Annealing.s"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.o"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.i"
+	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Area-Optimal_Polygonization_Using_Spatial_Division.s"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.o"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.i"
 	@echo "... Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/modules/Polygonization_Using_Convex_Hull_Algorithm.s"

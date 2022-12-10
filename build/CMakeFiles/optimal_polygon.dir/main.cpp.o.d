@@ -2225,4 +2225,5 @@ CMakeFiles/optimal_polygon.dir/main.cpp.o: \
   /opt/homebrew/include/boost/iterator/counting_iterator.hpp \
   /opt/homebrew/include/boost/detail/numeric_traits.hpp \
   /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Polygonization_Using_Convex_Hull_Algorithm.hpp \
-  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Local_Search_Area-Optimal_Polygonization.hpp
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Area-Optimal_Polygonization_Using_Simulated_Annealing.hpp \
+  /Users/angeloskorakitis/Documents/University/NKUA/7/Project/2023-emiris-k23-assignment-2/programs/../include/Area-Optimal_Polygonization_Using_Local_Search.hpp

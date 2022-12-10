@@ -1,13 +1,13 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
 //
-// Local Search for Area-Optimal Polygonization
+// Area-Optimal_Polygonization_Using_Local_Search
 //
 //
 /////////////////////////////////////////////////////////////////////////////////
 
 
-#include "Local_Search_Area-Optimal_Polygonization.hpp"
+#include "Area-Optimal_Polygonization_Using_Local_Search.hpp"
 
 bool compare_delta(double temp_delta, double delta, String optimization)
 {
@@ -143,27 +143,4 @@ Polygon local_search_step(Polygon polygon, VertexCirculatorVector path, Segment 
     
     // Else return the initial polygon.
     return polygon;
-}
-
-int position_of_point_in_polygon(Polygon polygon, Point point) 
-{
-    int position = 0;
-    for(VertexIterator i = polygon.begin(); i != polygon.end(); i++) 
-    {
-        if(point == *i) break;
-        position++;
-
-    }
-    return position;
-}
-
-int position_of_segment_in_polygon(Polygon polygon, Segment segment) 
-{
-    int position = 0;
-    for(EdgeIterator i = polygon.edges_begin(); i != polygon.edges_end(); i++)
-    {
-        if((segment == *i) || (segment.opposite() == *i)) break;
-        position++;
-    }
-    return position;
 }
