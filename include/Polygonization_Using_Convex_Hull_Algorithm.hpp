@@ -81,13 +81,3 @@ void add_point_to_polygon(Point point, Segment edge, Polygon* polygon);
 
 void add_point_to_polygon(Polygon* polygon, Tuple tuple);
 
-
-
-
-
-
-int position_of_point_in_polygon(Polygon polygon, Point point);
-
-int position_of_segment_in_polygon(Polygon polygon, Segment segment);
-
-Polygon spatial_convex_hull_algorithm(PointVector initial_points);

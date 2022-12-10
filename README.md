@@ -1,236 +1,166 @@
-# 2023-emiris-k23-assignment-1
+2023-emiris-k23-assignment-2
 
-*Project Παραδοτέο 1*
+Project Παραδοτέο 2
 
 Ομάδα:
 
-Άγγελος Κορακίτης ΑΜ 1115201900087 (sdi1900087)
-Σταύρος Τρουπής ΑΜ 1115201900191 (sdi1900191)
+Άγγελος Κορακίτης ΑΜ 1115201900087 (sdi1900087) Σταύρος Τρουπής ΑΜ 1115201900191 (sdi1900191)
 
-Έχουν υλοποιηθεί οι αλγόριθμοι 1 και 2 της εκφώνησης, ο αυξητικός και με βάση το κυρτό περίβλημα.
+Έχουν υλοποιηθεί οι αλγόριθμοι 1 και 2 της εκφώνησης, ο local search και ο simulated annealing.
 
-Ο Άγγελος (sdi1900087) ασχολήθηκε με την υλοποίηση του αυξητικού αλγόριθμου.
-Ο Σταύρος (sdi1900191) ασχολήθηκε με την υλοποίηση του αλγόριθμου με βάση το κυρτό περίβλημα.
+Ο Άγγελος (sdi1900087) ασχολήθηκε με την υλοποίηση του local search αλγορίθμου. Ο Σταύρος (sdi1900191) ασχολήθηκε με την υλοποίηση του simulated annealing αλγορίθμου.
 
 Περιεχόμενα README:
--   Kατάλογος αρχείων.
--   Περιγραφή αρχείων.
--   Οδηγίες μεταγλώττισης και χρήσης του προγράμματος.
--   Περιγραφή κώδικα.
--   Παραδείγματα εκτέλεσης και σχολιασμός τους.
 
--   Κατάλογος αρχείων:
-.
-├── build
-│   └── CMakeFiles
-│      
-├── include
-│    ├── Polygonization_Using_Convex_Hull_Algorithm.hpp
-│    ├── Polygonization_Using_Incremental_Algorithm.hpp
-│    └── Utilities.hpp
-│       
-├── modules
-│    ├── Polygonization_Using_Convex_Hull_Algorithm.cpp
-│    ├── Polygonization_Using_Incremental_Algorithm.cpp
-│    └── Utilities.cpp
-└── programs
-     ├── CMakeLists.txt
-     └── main.cpp
+    Kατάλογος αρχείων.
 
+    Περιγραφή αρχείων.
 
--   Περιγραφή αρχείων:
+    Οδηγίες μεταγλώττισης και χρήσης του προγράμματος.
 
-    Η δομή των αρχείων είναι αυτή που φαίνεται στο παραπάνω δέντρο. Στο αρχείο build περιέχονται τα CMakeFiles, εκεί γίνεται και η μεταγλώττιση του
-    προγράμματος με τη χρήση της εντολής make. Στην συνέχεια περιέχονται τα include και modules τα οποία περιέχουν τον κώδικα που γράψαμε για την υλοποίηση των αλγορίθμων. Στο αρχείο include, 
-    όπως φανερώνει και το όνομα του, περιέχονται τα .hpp αρχεία, τα οποία με την σειρά τους περιέχουν τις δηλώσεις των συναρτήσεων και μια περιγραφή για το τι κάνει η κάθεμια.
-    Πιο συγκεκριμένα στο include: 
-        -   Polygonization_Using_Convex_Hull_Algorithm.hpp : Περιέχει τις δηλώσεις των συναρτήσεων που χρειάστηκαν για την υλοποίηση του αλγορίθμου με βάση το κυρτό περίβλημα.
-        -   Polygonization_Using_Incremental_Algorithm.hpp : Περιέχει τις δηλώσεις των συναρτήσεων που χρειάστηκαν για την υλοποίηση του αυξητικού αλγορίθμου. 
-        -   Utilities.hpp : Περιέχει τις δηλώσεις βοηθητικών συναρτήσεων που που δεν σχετίζονται άμεσα με τους αλγόριθμους που υλοποιήθηκαν. Αυτές είναι printing functions που χρησιμοποιήσαμε
-        κατα την υλοποίηση των αλγορίθμων για έλεγχο των πολυγώνων, καθώς και των συναρτήσεων για την ανάγνωση από το αρχείο εισόδου, των σημείων, αλλα και το γράψιμο των αποτελεσμάτων σε
-        αρχείο εξόδου, σύμφωνα με την εκφώνηση. Επίσης, στο συγκεκριμένο αρχείο υπάρχουν οι δηλώσεις των βιβλιοθηκών που χρειαστήκαμε, όπως επίσης και μερικά typedefs για την αναγνωσιμότητα του κώδικα.
-    Στο αρχείο modules περιέχονται τα αντίστοιχα των παραπάνω αρχείων επικεφαλίδας, .cpp αρχεία, με σχολιασμό για την λειτουργία της κάθε συνάρτησης που περιέχεται.
-    Πιο συγκεκριμένα στο modules: 
-        -   Polygonization_Using_Convex_Hull_Algorithm.cpp
-        -   Polygonization_Using_Incremental_Algorithm.cpp
-        -   Utilities.cpp
-    Τέλος, υπάρχει ο κατάλογος programs που περιέχει το main.cpp, όπου γίνεται μια επεξεργασία των παραμέτρων εισόδου και καλούνται οι απαραίτητες συναρτήσεις από τα αρχεία που περιγράφηκαν παραπάνω για την εκτέλεση των αλγορίθμων σύμφωνα με τις οδηγίες της εκφώνησης, όπως επίσης και το αρχείο CMakeLists.txt το οποίο έχει τις απαραίτητες πληροφορίες για το πρόγραμμα μας, προκειμένου να μπορεί
-    να τρέχει το cmake και να δημιουργήσει το απαραίτητο MakeFile για την μεταγλώττιση του προγράμματος.
+    Περιγραφή κώδικα.
+
+    Παραδείγματα εκτέλεσης και σχολιασμός τους.
+
+    Κατάλογος αρχείων: . ├── build │ └── CMakeFiles │
+    ├── include │ ├── Local_Search_Area-Optimal_Polygonization.hpp │ ├── Polygonization_Using_Convex_Hull_Algorithm.hpp │ ├── Polygonization_Using_Incremental_Algorithm.hpp │ └── Utilities.hpp │
+    ├── modules │ ├── Local_Search_Area-Optimal_Polygonization.cpp │ ├── Polygonization_Using_Convex_Hull_Algorithm.cpp │ ├── Polygonization_Using_Incremental_Algorithm.cpp │ └── Utilities.cpp └── programs ├── CMakeLists.txt └── main.cpp
+
+    Περιγραφή αρχείων:
+
+    Η δομή των αρχείων είναι αυτή που φαίνεται στο παραπάνω δέντρο. Στο αρχείο build περιέχονται τα CMakeFiles, εκεί γίνεται και η μεταγλώττιση του προγράμματος με τη χρήση της εντολής make. Στην συνέχεια περιέχονται τα include και modules τα οποία περιέχουν τον κώδικα που γράψαμε για την υλοποίηση των αλγορίθμων. Στο αρχείο include, όπως φανερώνει και το όνομα του, περιέχονται τα .hpp αρχεία, τα οποία με την σειρά τους περιέχουν τις δηλώσεις των συναρτήσεων και μια περιγραφή για το τι κάνει η κάθεμια. Πιο συγκεκριμένα στο include: - Polygonization_Using_Convex_Hull_Algorithm.hpp : Περιέχει τις δηλώσεις των συναρτήσεων που χρειάστηκαν για την υλοποίηση του αλγορίθμου με βάση το κυρτό περίβλημα. - Polygonization_Using_Incremental_Algorithm.hpp : Περιέχει τις δηλώσεις των συναρτήσεων που χρειάστηκαν για την υλοποίηση του αυξητικού αλγορίθμου. - Local_Search_Area-Optimal_Polygonization.hpp : Περιέχει τις δηλώσεις των συναρτήσεων που χρειάστηκαν για την υλοποίηση του αλγορίθμου τοπικής αναζήτησης - Utilities.hpp : Περιέχει τις δηλώσεις βοηθητικών συναρτήσεων που που δεν σχετίζονται άμεσα με τους αλγόριθμους που υλοποιήθηκαν. Αυτές είναι printing functions που χρησιμοποιήσαμε κατα την υλοποίηση των αλγορίθμων για έλεγχο των πολυγώνων, καθώς και των συναρτήσεων για την ανάγνωση από το αρχείο εισόδου, των σημείων, αλλα και το γράψιμο των αποτελεσμάτων σε αρχείο εξόδου, σύμφωνα με την εκφώνηση. Επίσης, στο συγκεκριμένο αρχείο υπάρχουν οι δηλώσεις των βιβλιοθηκών που χρειαστήκαμε, όπως επίσης και μερικά typedefs για την αναγνωσιμότητα του κώδικα. 
+    Στο αρχείο modules περιέχονται τα αντίστοιχα των παραπάνω αρχείων επικεφαλίδας, .cpp αρχεία, με σχολιασμό για την λειτουργία της κάθε συνάρτησης που περιέχεται. Πιο συγκεκριμένα στο modules: - Polygonization_Using_Convex_Hull_Algorithm.cpp - Polygonization_Using_Incremental_Algorithm.cpp - Local_Search_Area-Optimal_Polygonization.cpp - Utilities.cpp Τέλος, υπάρχει ο κατάλογος programs που περιέχει το main.cpp, όπου γίνεται μια επεξεργασία των παραμέτρων εισόδου και καλούνται οι απαραίτητες συναρτήσεις από τα αρχεία που περιγράφηκαν παραπάνω για την εκτέλεση των αλγορίθμων σύμφωνα με τις οδηγίες της εκφώνησης, όπως επίσης και το αρχείο CMakeLists.txt το οποίο έχει τις απαραίτητες πληροφορίες για το πρόγραμμα μας, προκειμένου να μπορεί να τρέχει το cmake και να δημιουργεί το απαραίτητο MakeFile για την μεταγλώττιση του προγράμματος.
+
+    Οδηγίες μεταγλώττισης και χρήσης του προγράμματος:
+
+    Στον κατάλογο /programs εκτελούμε: cmake -DCMAKE_BUILD_TYPE=Release -S . -B ../build
+
+    Για να κάνω compile και run εκτελούμε στον κατάλογο /build: 
+    
+    Compile:
+    make 
+    
+    Run:
+    ./optimal_polygon –i –o -algorithm_initial –algorithm <local_search or simulated_annealing> -L [L parameter according to algorithm] –max [maximal area polygonization] –min [minimal area polygonization] –threshold [in local search] –annealing <"local" or "global" or "subdivision" in simulated annealing>
+
+    (ΠΡΟΣΟΧΗ! Αν ακολουθηθούν τις παραπάνω οδηγίες, για να γίνει η μεταγλώττιση πρέπει να βρίσκεστε στον κατάλογο /build καθώς εκεί περιέχεται το MakeFile και δημιουργείται το εκτελέσιμο optimal_polygon. Χρειάζεται να λαμβάνετε υποψιν σας και στον προσδιορισμό του input και output file.)
+
+    Περιγραφή κώδικα:
+
+Όσον αφορά την επιλογή αλγορίθμου με βάση το πρώτο παραδοτέο, στον αυξητικό αλγόριθμο το initialization είναι πάντα 1a ενώ το edge_selection ειναι min, max ανάλογα με το αντίστοιχο όρισμα που δίνεται από την γραμμή εντολών. Στον αλγόριθμο με βάση το κυρτό περίβλημα...()
 
 
--   Οδηγίες μεταγλώττισης και χρήσης του προγράμματος:
-
-    Στον κατάλογο /programs εκτελούμε:
-    cmake -DCMAKE_BUILD_TYPE=Release -S . -B ../build
-
-    Για να κάνω compile και run εκτελούμε στον κατάλογο /build:
-    make
-    ./to_polygon -i <point set input file> -o <output file> -algorithm <incremental or convex_hull> -edge_selection <1 or 2 or 3> -initialization <1a or 1b or 2a or 2b | μόνο στον αυξητικό αλγόριθμο>
-
-    (ΠΡΟΣΟΧΗ! Αν ακολουθηθούν τις παραπάνω οδηγίες, για να γίνει η μεταγλώττιση πρέπει να βρίσκεστε στον κατάλογο /build καθώς εκεί περιέχεται το MakeFile και δημιουργείται το εκτελέσιμο to_polygon. Χρειάζεται να λαμβάνετε υποψιν σας και στον προσδιορισμό του input και output file.)
 
 
--   Περιγραφή κώδικα:
 
-Όσον αφορά τον Αυξητικό Αλγόριθμο:
+Όσον αφορά τον Local Search αλγόριθμο:
 
-Περιγραφή:
-    Αρχικά, 
-    (a) διατάσσουμε τα σημεία σύμφωνα με την αρχικοποίηση που μας δίνεται σαν παράμετρο κατά την εκτέλεση του προγράμματος. Επιλέγουμε
-    τα πρώτα τρία με τη διατεταγμένη σειρά που βρίσκονται στον πίνακα και δημιουργούμε ένα πολύγωνο με αυτά. Αν αυτά είναι συνευθειακά τότε προσθέτουμε ένα ακόμα σημείο
-    πριν από το πρώτο. Αν το πολύγωνο δεν είναι counter-clock-wise oriented τότε το κάνουμε. 
-    (b)Στη συνέχεια, κάνουμε μια επανάληψη για όλα τα σημεία. 
-    Πιο συγκεκριμένα, (b1) για κάθε σημείο βρίσκουμε τις κόκκινες ακμές, δηλαδή αυτές που είναι ορατές από το σημείο που θέλουμε να προσθέσουμε, στο ΚΠ του πολυγώνου. Aυτό γίνεται με τη
-    χρήση της συνάρτησης is_edge_visible(), η οποία χρησιμοποιεί την CGAL::intersection() όπου για κάθε ακμή του πολυγώνου και για το τρίγωνο που δημιουργείται απο το σημείο που θέλουμε να προσθέουμε και τα άκρα της ακμής που χρειάζεται να δούμε αν είναι ορατή, βλέπουμε αν υπάρχει τομή με την τρέχουσα πολυγωνική γραμμή.
-    (b2) Έπειτα, βρίσκουμε τις ορατές ακμές του πολυγώνου. Αυτές θα βρίσκονται πίσω από τις κόκκινες για αυτόν τον λόγο, για κάθε μια κόκκινη ακμή, ελέγχουμε τις ακμές του πολυγώνου που βρίσκονται ανάμεσα στα δύο άκρα της κόκκινης ακμής, αν αυτές είναι ορατές από το σημείο. Όπως και στο προηγούμενο βήμα γίνεται χρήση της is_edge_visible().
-    (b3) Τέλος, επιλέγουμε μια από τις ορατές ακμές του πολυγώνου σύμφωνα με την στρατηγική (τυχαία, ελάχιστη επιφάνεια, μέγιστη επιφάνεια) που μας δώθηκε ως παράμετρος στην εκτέλεση του προγράμματος. 
+Περιγραφή: (a) Επιλογή αλγορίθμου για την αρχική πολυγωνοποίηση σημειοσυνόλου από την 1η εργασία, όπως αναφέρεται παραπάνω. (b) Για κάθε ακμή του πολυγώνου βρίσκουμε ένα path από 1 εως L σημεία. Εφαρμόζουμε τις αλλαγές στο πολύγωνο όπως ακριβώς περιγράφεται στον αλγόριθμο των διαφανειών, διαγραφουμε το κάθε σημείο του path της πολυγωνικής γραμμής απο την θέση που βρίσκεται και τα προσθέτω το σημείο αυτο πίσω απο το target σημείο της ακμής που είχαμε επιλέξη αρχικά. Το επόμενο σημείο του path το διαγράφουμε και αυτη τη φορα το προσθέτουμε πίσω απο το προηγούμενο σημείο. Αυτή η διαδικασία συνεχίζεται για όλο το path και στον κώδικα υλοποιείται από την local_search_step συνάρτηση. Συνεχίζουμε αυτές τις αλλαγές μέχρι η βελτίωση να είναι το πολύ όσο το threshold.
 
-    Για μεγαλύτερη λεπτομέρεια, υπάρχει εκτενής σχολιασμός στις ίδιες τις συναρτήσεις, στο Polygonization_Using_Incremental_Algorithm.cpp αρχείο.
+Η παραπάνω περιγραφή αφορά σύνολα σημείων μεχρι 500 σημεία. Για σύνολα μεγαλύτερα απλώς επιλέγουμε 20 τυχαίες ακμές για να κανουμε την παραπάνω διαδικασία και όχι όλη την πολυγωνική γραμμή. Αυτό γίνεται για λόγους κόστους καθώς πειραματικά παρατηρούμε ότι αυξάνονται πολύ οι χρόνοι τους οποίους χρειάζεται ο αλγόριθμος. Το παραπάνω το είχαμε συζητήσει στην παράδοση του μαθήματος.
 
-Όσον αφορά τον Αλγόριθμο με Βάση το Κυρτό Περίβλημα:
+H συνάρτηση με την οποία υπολογίζουμε το delta είναι η (temp_area - area)/convex_hull_area, δηλαδή το εμβαδο της νεας πολυγωνικής γραμμής μείον της παλιάς προς το εμβαδόν του κυρτού περιβλήματος
 
-Περιγραφή:
 
-    Αρχικά, δημιουργείται το Κυρτό Περίβλημα με τη βοήθεια έτοιμης συνάρτησης της CGAL. Τα εσωτερικά σημεία
-    αποθηκεύνται σε ένα πίνακα. Έπειτα, όσο υπάρχουν ακόμα εσωτερικά σημεία, επαναλαμβάνονται τα παρακάτω βήματα:
-    - Επιλογή ακμής (ανάλογα με την είσοδο: τυχαία, με ελαχιστοποίηση ή μεγιστοποίηση εμβαδού).
-    - Εύρεση του κοντινότερου σημείου απ' όπου υπάρχει ορατότητα.
-    - Πρόσθεση του σημείου αυτού στο Πολύγωνο/Πολυγωνική Γραμμή. Σπάμε την ακμή που επιλέξαμε στο πρώτο βήμα 
-    και προσθέτουμε δύο ακμές που ενώνουν τα άκρα της αρχικής ακμής με το καινούριο σημείο. 
-    - Αφαίρεση του σημείου από το σύνολο των εσωτερικών σημείων.
 
-Σημειώσεις:
 
-    Όσον αφορά την εύρεση του κοντινότερου σημείου:
-    Το "κοντινότερο" σημείο από την ακμή θεωρούμε ότι είναι το σημείο το οποίο βρίσκεται πιο κοντά στην ακμή, υπάρχει ορατότητα
-    από το σημείο στην ακμή, και η πρόσθεση του σημείου στην πολυγωνική γραμμή δεν θα καθιστά άλλα σημεία εξωτερικά. 
 
-    Όσον αφορά την επιλογή της ακμής:
-    --> Όταν έχει δωθεί στην είσοδο η επιλογή 1, επιλέγεται μία τυχαία ακμή της πολυγωνικής ακμής που υπάρχει "κοντινότερο" σημείο προς αυτήν.
-    --> Όταν έχει δωθεί στην είσοδο η επιλογή 2, ελέγχονται όλα τα τρίγωνα που δημιουργούνται από τις ακμές της
-    πολυγωνικής ακμής και τα "κοντινότερα" σε αυτές σημεία και μετράται το εμβαδό τους. Τελικά επιλέγεται η ακμή που το αντίστοιχο
-    τρίγωνό της έχει το ΜΕΓΑΛΥΤΕΡΟ εμβαδό. Αφού στη είσοδο ζητάται η ακμή που προσθέτει το ελάχιστο εμβαδό, αντίστοιχα σε αυτόν τον
-    αλγόριθμο επιλέγεται η ακμή που ΑΦΑΙΡΕΙ από το Κυρτό Περίβλημα το μεγαλύτερο εμβαδό. 
-    --> Όταν έχει δωθεί στην είσοδο η επιλογή 3, όμοια με το δύο, επιλέγεται η ακμή που το αντίστοιχο τρίγωνό της έχει το ΜΙΚΡΟΤΕΡΟ
-    εμβαδό, αφού αφαιρεί απ' το κυρτό πολύγωνο το μικρότερο εμβαδό.
 
--   Παραδείγματα εκτέλεσης και σχολιασμός τους:
+Όσον αφορά το simulated annealing:
 
-Η μορφή των παραδειγμάτων είναι:
-<εντολή εκτέλεσης>
-<αποτέλεσμα εξόδου>
+Στο αρχείο Simulated_Annealing.cpp περιέχεται ο πηγαίος κώδικας της υλοποίησης του simulated annealing. 
+Υλοποιούνται και τα δύο Local και Global step. 
 
-Παραδείγματα με τον αλγόριθμο με βάση το κυρτό περίβλημα.
+Για το global step. Το Global step υλοποιείται με την διαγραφή ενός τυχαίου σημείου του πολυγώνου και την εισαγωγή του ξανά
+στο πολύγωνο σε τυχαίο σημείο, με τέτοιο τρόπο ώστε το πολύγωνο να παραμένει απλό και οι νέες ακμές που δημιουργούνται να μην
+τέμνονται με άλλες ακμές του πολυγώνου ή μεταξύ τους. Η συνάρτηση global_step δέχεται ως όρισμα ένα πολύγωνο και επιχειρεί
+σε αυτό μία global step αλλαγή, αν η αλλαγή είναι αποδεκτή, επιστρέφει true και το πολύγωνο αλλαγμένο, αν δεν είναι 
+αποδεκτή, επιστρέφει false και το πολύγωνο στην αρχική του μορφή. 
 
-./to_polygon -i ../instances/data/images/us-night-0000300.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 1
 
-Algorithm:convex_hull_edge_selection1
-area: 52162590
-ratio: 0.450821
-construction time: 24.399
+Για το loal step. Το Local step υλοποιείται με την διαγραφή ενός τυχαίου σημείου του πολυγώνου και την εισαγωγή του ξανά
+στο πολύγωνο μία θέση πιο πίσω από αυτήν που βρισκόταν αρχικά, με τέτοιο τρόπο ώστε το πολύγωνο να παραμένει απλό και οι νέες ακμές που δημιουργούνται να μην
+τέμνονται με άλλες ακμές του πολυγώνου ή μεταξύ τους. Ο έλεγχος της τομής των ακμών υλοποιείται μέσω της δομής Kd-tree
+της CGAL. Μέσω της δομής εντοπίζουμε τα σημεία του πολυγώνου που βρίσκονται στο νοητό ορθογώνιο που δημιουργούν τα 
+σημεία της τοπικής αλλαγής και ελέγχουμε μόνο τις ακμές που ξεκινούν από τα σημεία αυτά. Έτσι δεν χρειάζεται να ελέγξουμε 
+όλο το πολύγωνο. Η συνάρτηση local_step δέχεται ως όρισμα το πολύγωνο και το kd-tree με τα σημεία και επιχειρεί στο πολύγωνο
+μία local step αλλαγή. Αν η αλλαγή είναι αποδεκτή (ο έλεγχος γίνεται καλώντας κατάλληλες συναρτήσεις step_is_valid και edges_in_box_intersect),
+επιστρέφει true και το πολύγωνο αλλαγμένο, αν δεν είναι αποδεκτή, επιστρέφει false και το πολύγωνο στην αρχική του μορφή. 
 
-./to_polygon -i ../instances/data/images/us-night-0000090.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 2
 
-Algorithm:convex_hull_edge_selection2
-area: 24712514
-ratio: 0.273234
-construction time: 11.638
 
-./to_polygon -i ../instances/data/images/euro-night-0000100.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 2
 
-Algorithm:convex_hull_edge_selection2
-area: 18441130
-ratio: 0.244309
-construction time: 16.265
+Όσον αφορά το spatial subdivision:
 
-./to_polygon -i ../instances/data/images/euro-night-0000200.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 2  
+Στο αρχείο Spatial_Subdivision.cpp περιέχεται ο πηγαίος κώδικας της υλοποίησης του spatial subdivision.
 
-Algorithm:convex_hull_edge_selection2
-area: 17217062
-ratio: 0.222657
-construction time: 223.203
+Το spatial subdivision χωρίζει το σημειοσύνολο σε spals (μικρότερα σημειοσύνολα όπως ορίζονται στην εκφώνηση).
+Κατά τη διάρκεια του διαχωρισμού, διασφαλίζεται ότι το κάθε spal τηρεί τις προϋποθέσεις που τίθενται, που αφορούν
+την μονοτονία των ακριανών ακμών του κάτω μέρους του convex hull του spal.
 
-./to_polygon -i ../instances/data/images/paris-0000200.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 1
+Για κάθε ένα από αυτά τα spals καλείται μια παραλλαγή του αλγόριθμου convex_hull της πρώτης εργασίας (spatial convex hull), η οποία λειτουργεί
+με παρόμοιο τρόπο με τον απλό convex hull, διασφαλίζοντας, όμως, ότι οι "μαρκαρισμένες" ακμές του spal παραμένουν ως έχουν
+και δεν αλλάζουν. Έτσι, για κάθε spal έχουμε μια πολυγωνοποίηση που περιέχει τις "μαρκαρισμένες" ακμές. 
 
-Algorithm:convex_hull_edge_selection1
-area: 148970130
-ratio: 0.547389
-construction time: 5.708
+Ύστερα, για κάθε τέτοιο πολύγωνο που δημιουργήθηκε από spal καλείται μία παραλλαγή του αλγόριθμου simulated annealing (spatial annealing).
+Ο αλγόριθμος αυτός λειτουργεί με παρόμοιο τρόπο με τον απλό simulated annealing, απλώς διασφαλίζει ότι οι "μαρκαρισμένες"
+ακμές του πολύγώνου παραμένουν ως έχουν και δεν αλλάζουν. Αυτό επιτυγχάνεται με την κλήση μίας παραλλαγής της συνάρτησης 
+global step (spatial global step), η οποία εκτελεί ένα global step στο πολύγωνο, διασφαλίζουντας πάλι ότι οι "μαρκαρισμένες"
+ακμές δεν αλλάζουν. 
 
-./to_polygon -i ../instances/data/images/paris-0000200.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 3
+Έτσι, έχουμε μία σειρά από πολύγωνα, στα οποία έχει εφαρμοστεί το simulated annealing. Τελικά, ενώνουμε τα πολύγωνα
+με τον τρόπο που περιγράφεται στην εκφώνηση και καταλήγουμε με ένα μεγάλο τελικό πολύγωνο. 
 
-Algorithm:convex_hull_edge_selection3
-area: 242592482
-ratio: 0.891403
-construction time: 209.158
 
-./to_polygon -i ../instances/data/uniform/uniform-0000070-1.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 3
 
-Algorithm:convex_hull_edge_selection3
-area: 13910620
-ratio: 0.892392
-construction time: 5.273
 
-./to_polygon -i ../instances/data/uniform/uniform-0000100-2.instance -o ../programs/blah.txt -algorithm convex_hull -edge_selection 3
 
-Algorithm:convex_hull_edge_selection3
-area: 25964820
-ratio: 0.884023
-construction time: 19.913
 
-Τα αποτελέσματα είναι αυτά που περιμέναμε. Όσον αφορά την επιφάνεια του πολυγώνου, το ratio είναι υψηλό όταν επιλέγουμε -edge_selection 3, δηλαδή δηλαδή επιλογή ακμής για να προστίθεται το μέγιστο εμβαδόν και χαμηλό όταν επιλέγουμε -edge_selection 2, δηλαδή επιλογή ακμής για να προστίθεται το ελάχιστο εμβαδόν, ενώ γύρω στο μισό όταν έχουμε τυχαία επιλογή ακμής, -edge_selection 1. Σχετικά με τον χρόνο κατασκευής, παρατηρούμε ότι είναι χαμηλός όταν έχουμε τυχαία επιλογή ακμής καθώς απλώς εισάγουμε μία τυχαία ακμή, ενώ στις άλλες επιλογές, υπάρχουν περισσότεροι υπολογισμοί όπως περιγράφεται παραπάνω, και ο χρόνος είναι μεγαλύτερος. 
+    Παραδείγματα εκτέλεσης και σχολιασμός τους:
 
-Παραδείγματα με τον αυξητικό αλγόριθμο.
+Η μορφή των παραδειγμάτων είναι: <εντολή εκτέλεσης> <αποτέλεσμα εξόδου>
 
-./to_polygon -i ../instances/data/images/euro-night-0000200.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 1 -initialization 2a
+./optimal_polygon -i ../instances/data/images/paris-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 5 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection1_initialization2a
-area: 41036990
-ratio: 0.530706
-construction time: 0.065
+Algorithm: incremental_local_search_max area_initial: 197092256 area: 233813130 ratio_initial: 0.724213 ratio: 0.859143 construction time: 117.846
 
-./to_polygon -i ../instances/data/images/euro-night-0000200.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 2 -initialization 2b
+./optimal_polygon -i ../instances/data/images/paris-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 4 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection2_initialization2b
-area: 19258862
-ratio: 0.249063
-construction time: 0.068
+Algorithm: incremental_local_search_max area_initial: 207240082 area: 228804018 ratio_initial: 0.744221 ratio: 0.821659 construction time: 332.288
 
-./to_polygon -i ../instances/data/images/us-night-0000500.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 2b
+./optimal_polygon -i ../instances/data/images/london-0000015.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 3 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection3_initialization2b
-area: 93704260
-ratio: 0.752762
-construction time: 0.354
+Algorithm: incremental_local_search_max area_initial: 86055088 area: 121031006 ratio_initial: 0.634368 ratio: 0.892199 construction time: 0.014
 
-./to_polygon -i ../instances/data/images/us-night-0000500.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 2b
+./optimal_polygon -i ../instances/data/images/stars-0000010.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 2 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection3_initialization2b
-area: 93704260
-ratio: 0.752762
-construction time: 0.355
+Algorithm: incremental_local_search_max area_initial: 104930649890 area: 127476507282 ratio_initial: 0.755879 ratio: 0.918291 construction time: 0.001
 
-./to_polygon -i ../instances/data/images/paris-0001000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 1b
+./optimal_polygon -i ../instances/data/images/paris-0000300.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 5 -min -threshold 0.005
 
-Algorithm: incremental_edge_selection3_initialization1b
-area: 211032546
-ratio: 0.703285
-construction time: 1.083
+Algorithm: incremental_local_search_min area_initial: 73467662 area: 64573498 ratio_initial: 0.26383 ratio: 0.23189 construction time: 61.687
 
-./to_polygon -i ../instances/data/images/skylake-0004000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 3 -initialization 1b
+./optimal_polygon -i ../instances/data/images/us-night-0002000.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 5 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection3_initialization1b
-area: 193064582
-ratio: 0.689354
-construction time: 19.398
+Algorithm: incremental_local_search_max area_initial: 383442490 area: 383542680 ratio_initial: 0.760347 ratio: 0.760546 construction time: 30.454
 
-./to_polygon -i ../instances/data/images/protein-0020000.instance -o ../programs/blah.txt -algorithm incremental -edge_selection 2 -initialization 1b
+./optimal_polygon -i ../instances/data/images/us-night-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 6 -max -threshold 0.001
 
-Algorithm: incremental_edge_selection2_initialization1b
-area: 28763919898
-ratio: 0.259819
-construction time: 357.633
+Algorithm: incremental_local_search_max area_initial: 83075854 area: 91975332 ratio_initial: 0.78412 ratio: 0.868119 construction time: 139.239
 
-Όπως παρατηρούμε οι χρόνοι του αυξητικού αλγορίθμου είναι σημαντικά καλύτεροι σε σχέση με του αλγόριθμου με βάση το ΚΠ. Είναι κάτι το οποίο περιμέναμε καθώς ο δεύτερος έχει περισσότερους υπολογισμούς για την πολυγωνοποίηση. Οι παρατηρήσεις για το edge_selection ισχύουν και εδώ, ενώ το initialization δεν επηρεάζει τους χρόνους.
+./optimal_polygon -i ../instances/data/images/us-night-0000200.instance -o ../programs/blah.txt -algorithm_initial incremental -algorithm local_search -L 6 -max -threshold 0.01
+
+Algorithm: incremental_local_search_max area_initial: 83075854 area: 86521198 ratio_initial: 0.78412 ratio: 0.816639 construction time: 14.14
+
+Γενικα παρατηρούμε ότι για μεγάλα σύνολα 1000+ σημεία χρειάζονται πολλοί πόροι για να τρέξουμε τον αλγόριθμο με μικρό threshold, μικρότερο από 0.001 και επομένως να έχουμε σημαντικές αλλαγές στην βελτιστοποίηση του εμβαδού.
+
+Εξαρτάται αρκετα και από την γεωμετρία του ίδιου του προβλήματος και το πόσες αλλαγές θα βρει η ευριστική. Για παραδειγμα τρέχοντας δυο διαφορετικά σημειοσύνολα με 200 σημεία και ίδιες παραμέτρους παρατηρούμε μεγάλη διαφορα στα αποτελέσματα...(να πω περισσοτερα)
+
+
+
+
+
+
+
 
 Καλή Διόρθωση! :D
