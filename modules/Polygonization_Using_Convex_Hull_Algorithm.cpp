@@ -473,4 +473,68 @@ int position_of_segment_in_polygon(Polygon polygon, Segment segment) {
 
   if(found) return position;
   else return -1;
+
 }
+
+
+
+
+Polygon spatial_convex_hull_algorithm(PointVector input_points) {
+
+  // Polygon initally is the convex hull.
+  Polygon polygon;
+  
+  CGAL::convex_hull_2(input_points.begin(), input_points.end(), std::back_inserter(polygon));
+
+  // Creating inner_points vector. A vector with all inner points. 
+  PointVector inner_points;
+  for(Point point : input_points) {
+    if(!point_is_on_polygon(point, polygon)) {
+      inner_points.push_back(point);
+    }
+  }
+
+
+  Point not_visible_point(-1, -1);
+  
+  Point rightmost_point = *(polygon.right_vertex());
+  Point leftmost_point = *(polygon.left_vertex());
+  int right_index = position_of_point_in_polygon(polygon, rightmost_point);
+  int left_index = position_of_point_in_polygon(polygon, leftmost_point);
+
+  int previous_of_right = right_index - 1;
+  if(right_index == 0) previous_of_right = polygon.size() - 1;
+
+  Segment left_segment = polygon.edge(left_index);
+  Segment right_segment = polygon.edge(previous_of_right);
+  
+
+  // While there are inner points.
+  while(inner_points.size() > 0) {
+
+    Tuple tuple;
+    Segment edge;
+    Point point;
+    
+
+    // Pick an edge and find the closest point to it.
+    do {
+      do {
+        edge = pick_random_edge(polygon);
+        // Make sure that "pinned down" edges are not chosen.
+      } while((edge == left_segment) || (edge == right_segment));
+      point = point_closest_to_edge(edge, inner_points, polygon);
+      
+    // Keep trying untill you find an edge with a visible point.
+    // (There certainly must be one)
+    } while(point == not_visible_point); 
+
+
+    // Add the point to the polygon and remove it from the inner points.
+    add_point_to_polygon(point, edge, &polygon);
+    remove_point_from_vector(&inner_points, point);
+  }
+
+  return polygon;
+}
+
