@@ -9,6 +9,7 @@
 
 #include "Area-Optimal_Polygonization_Using_Local_Search.hpp"
 
+
 bool compare_delta(double temp_delta, double delta, String optimization)
 {
     if(optimization == "max")

@@ -97,7 +97,7 @@ void print_output(Polygon polygon_initial,
       long int area = CGAL::abs(polygon.area());
       
       Polygon convex_hull;
-      CGAL::convex_hull_2(polygon_initial.begin(), polygon_initial.end(), std::back_inserter(convex_hull));
+      CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
       long int convex_hull_area = CGAL::abs(convex_hull.area());
 
       long double ratio_initial =(long double)area_initial / convex_hull_area;
